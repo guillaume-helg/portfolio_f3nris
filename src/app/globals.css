@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #13233E;
+  --color-bg-variant: rgba(37, 63, 104, 1);
+  --color-primary-variant: #004C6C;
+  --color-tertiary: rgb(45, 212, 191);
+  --color-fontnew: #ccd6f6;
+  --color-black-v2: #004C6C65;
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  body {
+    font-family: var(--font-open-sans), "Open Sans", sans-serif;
+    background: var(--color-bg);
+    color: #ffffff;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-weight: 500;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  a {
+    color: inherit;
+    transition: all 400ms ease;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+/* Timeline animations for Experience component */
+@keyframes moveline {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes movedown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
