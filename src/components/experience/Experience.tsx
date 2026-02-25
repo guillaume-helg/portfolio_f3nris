@@ -9,7 +9,7 @@ const animations = {
         100% {
             height: 100%;
         }
-    `, 
+    `,
 
     movedown: keyframes`
         0% {
@@ -63,11 +63,7 @@ const ContainerCards = styled.div`
     animation: ${animations.movedown} 1s linear forwards;
     opacity: 0;
 
-    /* TODO : solve problem to get the index of the card to apply formula and use animation delay
-    
-    &:nth-child(n) {
-        animation-delay: ${(props) => props.i * 1}s;
-    } */
+    /* TODO : solve problem to get the index of the card to apply formula and use animation delay */
 
     &.left-container {
         left: 0;
@@ -174,23 +170,23 @@ const ContainerArrow = styled.span`
 `;
 
 const Experience = () => {
-  return (
-    <ContainerExperience className='container'>
-        <Timeline>
-            {experiences.map((experience, index) => (
-                <ContainerCards className={`${index % 2 === 0 ? 'left-container' : 'right-container'}`} key={index} i={index} >
-                    <Logo src={experience.logo} alt={experience.name}/>
-                    <Card>
-                        <Title>{experience.title} @{experience.name}</Title>
-                        <Date>{experience.date}</Date>
-                        <p>{experience.resume}</p>
-                    </Card>
-                    <ContainerArrow className={index % 2 === 0 ? 'left-container-arrow' : 'right-container-arrow'} key={index}></ContainerArrow>
-                </ContainerCards>
-            ))} 
-        </Timeline>
-    </ContainerExperience>
-  )
+    return (
+        <ContainerExperience className='container'>
+            <Timeline>
+                {experiences.map((experience, index) => (
+                    <ContainerCards className={`${index % 2 === 0 ? 'left-container' : 'right-container'}`} key={index} >
+                        <Logo src={experience.logo} alt={experience.name} />
+                        <Card>
+                            <Title>{experience.title} @{experience.name}</Title>
+                            <Date>{experience.date}</Date>
+                            <p>{experience.resume}</p>
+                        </Card>
+                        <ContainerArrow className={index % 2 === 0 ? 'left-container-arrow' : 'right-container-arrow'} key={index}></ContainerArrow>
+                    </ContainerCards>
+                ))}
+            </Timeline>
+        </ContainerExperience>
+    )
 }
 
 export default Experience

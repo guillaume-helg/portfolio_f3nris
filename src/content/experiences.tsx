@@ -2,9 +2,6 @@ import logoMoi from '../../src/assets/logowbg.png'
 import logoNoz from "../assets/logo/logotype-noz.png"
 import logovs from "../assets/logo/viasante-logo.svg"
 import logoedokial from "../assets/logo/edokial-logo-page.png"
-import logoIUTRodez from "../assets/logo/logo-iut-rodez.svg"
-import logoMonteil from "../assets/logo/LOGO-MONTEIL-1.png"
-import logoUt3 from "../assets/logo/logo_ups_blanc_et_jaune_petit.png"
 
 export const experiences = [
     {
@@ -14,7 +11,7 @@ export const experiences = [
         date: '2022 Avril - Juin',
         resume: `J'ai adoré cette expérience, elle m'a permis d'en apprendre beaucoup sur le métier 
             d'architecte SI, mais aussi sur de nombreux autres métiers que l'on peut retrouver au sein d'une DSI`,
-        point: [ 
+        point: [
             'Rédaction de documents',
             'Recensement d’applications et de technologies sur Hopex',
             'Travaux de recherche / réflexion sur la cartographie d’un SI',
@@ -103,5 +100,5 @@ export const experiences = [
 ]
 
 
-    
+
 
