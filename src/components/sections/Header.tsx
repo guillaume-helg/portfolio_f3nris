@@ -4,6 +4,7 @@ import Image from "next/image";
 import Button from "@/components/ui/Button";
 import TypeWriter from "@/components/ui/TypeWriter";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { getAssetPath } from "@/utils/paths";
 
 export default function Header() {
     const { ref: leftRef, isVisible: leftVisible } = useScrollReveal<HTMLDivElement>({ threshold: 0.2 });
@@ -55,7 +56,7 @@ export default function Header() {
                         {/* Avatar */}
                         <div className="relative rounded-full w-[350px] h-[350px] overflow-hidden glass max-[720px]:w-[200px] max-[720px]:h-[200px]">
                             <Image
-                                src="/images/pdp/avataaar.svg"
+                                src={getAssetPath("/images/pdp/avataaar.svg")}
                                 alt="mon avatar"
                                 width={350}
                                 height={350}

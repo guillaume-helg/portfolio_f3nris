@@ -6,6 +6,7 @@ import { FiUsers } from "react-icons/fi";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { getAssetPath } from "@/utils/paths";
 
 function calculateAge(birthDate: Date): number {
     const currentDate = new Date();
@@ -35,7 +36,7 @@ export default function About() {
                 >
                     <div className="w-full aspect-square rounded-2xl overflow-hidden rotate-[10deg] hover:rotate-0 transition-all duration-500 hover:shadow-[0_0_40px_rgba(0,212,255,0.15)]">
                         <Image
-                            src="/images/pdp/moi1.jpg"
+                            src={getAssetPath("/images/pdp/moi1.jpg")}
                             alt="about me"
                             width={400}
                             height={400}

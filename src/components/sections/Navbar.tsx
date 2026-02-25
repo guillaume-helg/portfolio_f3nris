@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
+import { getAssetPath } from "@/utils/paths";
 
 export default function Navbar() {
     const [showLinks, setShowLinks] = useState(false);
@@ -31,7 +32,7 @@ export default function Navbar() {
         >
             {/* Logo */}
             <a href="#" className="w-[100px] max-md:w-[80px]">
-                <Image src="/images/logowbg.png" alt="Logo" width={100} height={40} />
+                <Image src={getAssetPath("/images/logowbg.png")} alt="Logo" width={100} height={40} />
             </a>
 
             {/* Nav Links */}
@@ -72,7 +73,7 @@ export default function Navbar() {
 
             {/* CV Button */}
             <Button
-                href="/images/CV1V4.png"
+                href={getAssetPath("/images/CV1V4.png")}
                 download
                 className="max-[976px]:mx-auto"
             >

@@ -6,6 +6,7 @@ import skills from "@/data/skills.json";
 import education from "@/data/education.json";
 import type { Skill, Education } from "@/types";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { getAssetPath } from "@/utils/paths";
 
 const typedSkills: Skill[] = skills;
 const typedEducation: Education[] = education;
@@ -22,6 +23,7 @@ export default function Knowledge() {
             const imgElement = divElement.querySelector("img");
             if (!imgElement) return;
 
+            // Wait for image to load to avoid "broken state" error on canvas draw
             const canvas = document.createElement("canvas");
             canvas.width = 1;
             canvas.height = 1;
@@ -29,13 +31,17 @@ export default function Knowledge() {
             if (!ctx) return;
 
             const onLoad = () => {
-                ctx.drawImage(imgElement, 0, 0, 1, 1);
-                const pixelData = ctx.getImageData(0, 0, 1, 1).data;
-                const color = `rgba(${pixelData[0]}, ${pixelData[1]}, ${pixelData[2]}, 0.1)`;
-                divElement.style.backgroundColor = color;
+                try {
+                    ctx.drawImage(imgElement, 0, 0, 1, 1);
+                    const pixelData = ctx.getImageData(0, 0, 1, 1).data;
+                    const color = `rgba(${pixelData[0]}, ${pixelData[1]}, ${pixelData[2]}, 0.1)`;
+                    divElement.style.backgroundColor = color;
+                } catch (e) {
+                    console.error("Error setting background color from image:", e);
+                }
             };
 
-            if (imgElement.complete) {
+            if (imgElement.complete && imgElement.naturalWidth !== 0) {
                 onLoad();
             } else {
                 imgElement.onload = onLoad;
@@ -70,7 +76,7 @@ export default function Knowledge() {
                                 group-hover:border-[rgba(0,212,255,0.3)]"
                         >
                             <Image
-                                src={skill.img}
+                                src={getAssetPath(skill.img)}
                                 alt={skill.title}
                                 width={54}
                                 height={54}

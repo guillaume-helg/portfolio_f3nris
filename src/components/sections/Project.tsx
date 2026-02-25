@@ -7,6 +7,7 @@ import type { Project as ProjectType } from "@/types";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { getAssetPath } from "@/utils/paths";
 
 const typedProjects: ProjectType[] = projects;
 
@@ -49,7 +50,7 @@ function TiltCard({ project }: { project: ProjectType }) {
             {/* Thumbnail */}
             <div className="w-auto h-[260px] bg-white/5 bg-center bg-cover rounded-t-2xl overflow-hidden">
                 <Image
-                    src={project.image}
+                    src={getAssetPath(project.image)}
                     alt={project.title}
                     width={350}
                     height={260}
@@ -64,7 +65,7 @@ function TiltCard({ project }: { project: ProjectType }) {
                         {project.title}
                     </h2>
                     <span className="w-10">
-                        <Image src={project.logo} alt="" width={40} height={40} />
+                        <Image src={getAssetPath(project.logo)} alt="" width={40} height={40} />
                     </span>
                 </div>
 

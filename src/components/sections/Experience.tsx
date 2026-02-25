@@ -5,6 +5,7 @@ import experiences from "@/data/experiences.json";
 import type { Experience as ExperienceType } from "@/types";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { getAssetPath } from "@/utils/paths";
 
 const typedExperiences: ExperienceType[] = experiences;
 
@@ -38,7 +39,7 @@ export default function Experience() {
                         >
                             {/* Timeline dot */}
                             <Image
-                                src={experience.logo}
+                                src={getAssetPath(experience.logo)}
                                 alt={experience.name}
                                 width={40}
                                 height={40}

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { FiLinkedin, FiDribbble, FiGithub } from "react-icons/fi";
 import Button from "@/components/ui/Button";
+import { getAssetPath } from "@/utils/paths";
 
 const currentYear = new Date().getFullYear();
 
@@ -14,7 +15,7 @@ export default function Footer() {
                 {/* Links */}
                 <div className="flex justify-between max-[976px]:flex-col max-[976px]:gap-8 max-[976px]:items-center">
                     <a href="#" className="w-[100px]">
-                        <Image src="/images/logowbg.png" alt="logo" width={100} height={40} />
+                        <Image src={getAssetPath("/images/logowbg.png")} alt="logo" width={100} height={40} />
                     </a>
                     <a
                         href="#about"
