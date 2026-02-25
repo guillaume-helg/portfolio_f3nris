@@ -3,6 +3,8 @@ name: CI/CD Pipeline
 on:
   push:
     branches: ['main']
+  pull_request:
+    branches: ['main']
   workflow_dispatch:
 
 permissions:
@@ -60,10 +62,11 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
+          path: './out'
 
   deploy:
     name: Deploy
+    if: github.event_name == 'push'
     environment:
       name: github-pages
       url: ${{ github.event.deployment.payload.web_url || steps.deployment.outputs.page_url }}
