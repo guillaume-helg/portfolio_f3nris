@@ -118,5 +118,65 @@
         "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
         "title": "MongoDB",
         "category": "Bases de données"
+    },
+    {
+        "num": 21,
+        "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg",
+        "title": "Golang",
+        "category": "Langages"
+    },
+    {
+        "num": 22,
+        "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original.svg",
+        "title": "AngularJS",
+        "category": "Frameworks"
+    },
+    {
+        "num": 23,
+        "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-plain.svg",
+        "title": "Kubernetes",
+        "category": "Outils"
+    },
+    {
+        "num": 24,
+        "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original.svg",
+        "title": "GitLab",
+        "category": "Outils"
+    },
+    {
+        "num": 25,
+        "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ansible/ansible-original.svg",
+        "title": "Ansible",
+        "category": "Outils"
+    },
+    {
+        "num": 26,
+        "img": "https://media.licdn.com/dms/image/v2/C4D0BAQEor1HNToH0oA/company-logo_200_200/company-logo_200_200/0/1630459802553/airbus_skywise_logo?e=1775692800&v=beta&t=IS8xZa545-7hwVVKLZNiqHVIoBqAkpzZ7iRxAO6t8WU",
+        "title": "Skywise",
+        "category": "Outils"
+    },
+    {
+        "num": 30,
+        "img": "https://www.secnumacademie.gouv.fr/favicon.ico",
+        "title": "MOOC ANSSI",
+        "category": "Cybersécurité"
+    },
+    {
+        "num": 27,
+        "img": "https://www.keycloak.org/resources/images/icon.svg",
+        "title": "Keycloak",
+        "category": "Cybersécurité"
+    },
+    {
+        "num": 28,
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Kali-dragon-icon.svg/960px-Kali-dragon-icon.svg.png",
+        "title": "Kali Linux",
+        "category": "Cybersécurité"
+    },
+    {
+        "num": 29,
+        "img": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Logo_burpsuite.jpg",
+        "title": "Burp Suite",
+        "category": "Cybersécurité"
     }
 ]

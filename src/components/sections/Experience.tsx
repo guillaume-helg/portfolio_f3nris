@@ -66,6 +66,30 @@ export default function Experience() {
                                 <p className="text-[var(--color-fontnew)]">
                                     {lang === 'en' ? experience.resumeEn : experience.resume}
                                 </p>
+                                {((lang === 'en' ? experience.pointEn : experience.point) ?? []).length > 0 && (
+                                    <ul className="mt-3 space-y-1.5 text-[var(--color-fontnew)]">
+                                        {(lang === 'en' ? experience.pointEn ?? [] : experience.point ?? []).map((pt, i) => (
+                                            <li key={i} className="flex items-start gap-2">
+                                                <span className="mt-[5px] shrink-0 w-1.5 h-1.5 rounded-full bg-[var(--color-tertiary)]" />
+                                                <span>{pt}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
+                                {(experience.technologie ?? []).length > 0 && (
+                                    <div className="mt-4 flex flex-wrap gap-2">
+                                        {experience.technologie.map((tech, i) => (
+                                            <span
+                                                key={i}
+                                                className="px-2.5 py-0.5 text-[11px] font-medium rounded-full
+                                                    bg-[rgba(var(--tertiary-rgb),0.12)] text-[var(--color-tertiary)]
+                                                    border border-[rgba(var(--tertiary-rgb),0.3)]"
+                                            >
+                                                {tech}
+                                            </span>
+                                        ))}
+                                    </div>
+                                )}
                             </li>
 
                             {/* Arrow */}

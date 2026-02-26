@@ -4,6 +4,7 @@ import About from "@/components/sections/About";
 import Knowledge from "@/components/sections/Knowledge";
 import Experience from "@/components/sections/Experience";
 import Project from "@/components/sections/Project";
+import Recommendations from "@/components/sections/Recommendations";
 import Hobbies from "@/components/sections/Hobbies";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/sections/Footer";
@@ -23,10 +24,13 @@ export default function Home() {
             <SectionDivider />
             <Project />
             <SectionDivider />
+            <Recommendations />
+            <SectionDivider />
             <Hobbies />
             <SectionDivider />
             <Contact />
             <Footer />
+
         </>
     );
 }

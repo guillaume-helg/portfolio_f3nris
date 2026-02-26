@@ -46,7 +46,7 @@ export default function CommandMenu() {
             <div className="command-content glass-strong rounded-2xl overflow-hidden shadow-2xl border border-[var(--card-border)]">
                 <Command.Input
                     placeholder={t.command.placeholder}
-                    className="w-full bg-transparent px-4 py-4 text-base border-b border-[var(--card-border)] outline-none text-[var(--text-primary)] placeholder-[var(--color-fontnew)] placeholder-opacity-50"
+                    className="w-full bg-transparent px-4 py-3 text-sm border-b border-[var(--card-border)] outline-none text-[var(--text-primary)] placeholder-[var(--color-fontnew)] placeholder-opacity-50"
                 />
 
                 <Command.List className="max-h-[300px] overflow-y-auto p-2 scrollbar-thin scrollbar-thumb-[rgba(var(--tertiary-rgb),0.25)]">
@@ -57,37 +57,40 @@ export default function CommandMenu() {
                     <Command.Group heading={t.command.navHeading} className="text-xs text-[var(--color-fontnew)] font-medium px-2 py-3">
                         <Command.Item
                             onSelect={() => runCommand(() => router.push("#"))}
-                            className="flex items-center gap-3 px-3 py-2.5 text-sm rounded-lg cursor-pointer transition-colors text-[var(--text-primary)] aria-selected:bg-[rgba(var(--tertiary-rgb),0.1)] aria-selected:text-[var(--tertiary)]"
+                            className="flex items-center gap-3 px-3 py-2 text-sm rounded-lg cursor-pointer transition-colors text-[var(--text-primary)] aria-selected:bg-[rgba(var(--tertiary-rgb),0.1)] aria-selected:text-[var(--tertiary)]"
                         >
                             <FiHome /> {t.command.top}
                         </Command.Item>
                         <Command.Item
                             onSelect={() => runCommand(() => router.push("#about"))}
-                            className="flex items-center gap-3 px-3 py-2.5 text-sm rounded-lg cursor-pointer transition-colors text-[var(--text-primary)] aria-selected:bg-[rgba(var(--tertiary-rgb),0.1)] aria-selected:text-[var(--tertiary)]"
+                            className="flex items-center gap-3 px-3 py-2 text-sm rounded-lg cursor-pointer transition-colors text-[var(--text-primary)] aria-selected:bg-[rgba(var(--tertiary-rgb),0.1)] aria-selected:text-[var(--tertiary)]"
                         >
                             <FiUser /> {t.nav.about}
                         </Command.Item>
                         <Command.Item
+                            keywords={["skill", "skills", "compétences", "competences", "competence"]}
                             onSelect={() => runCommand(() => router.push("#skill"))}
-                            className="flex items-center gap-3 px-3 py-2.5 text-sm rounded-lg cursor-pointer transition-colors text-[var(--text-primary)] aria-selected:bg-[rgba(var(--tertiary-rgb),0.1)] aria-selected:text-[var(--tertiary)]"
+                            className="flex items-center gap-3 px-3 py-2 text-sm rounded-lg cursor-pointer transition-colors text-[var(--text-primary)] aria-selected:bg-[rgba(var(--tertiary-rgb),0.1)] aria-selected:text-[var(--tertiary)]"
                         >
                             <FiCode /> {t.nav.skills}
                         </Command.Item>
                         <Command.Item
+                            keywords={["experience", "experiences", "expérience", "expériences", "work", "job"]}
                             onSelect={() => runCommand(() => router.push("#experience"))}
-                            className="flex items-center gap-3 px-3 py-2.5 text-sm rounded-lg cursor-pointer transition-colors text-[var(--text-primary)] aria-selected:bg-[rgba(var(--tertiary-rgb),0.1)] aria-selected:text-[var(--tertiary)]"
+                            className="flex items-center gap-3 px-3 py-2 text-sm rounded-lg cursor-pointer transition-colors text-[var(--text-primary)] aria-selected:bg-[rgba(var(--tertiary-rgb),0.1)] aria-selected:text-[var(--tertiary)]"
                         >
                             <FiBriefcase /> {t.nav.experience}
                         </Command.Item>
                         <Command.Item
+                            keywords={["project", "projects", "projet", "projets", "portfolio"]}
                             onSelect={() => runCommand(() => router.push("#project"))}
-                            className="flex items-center gap-3 px-3 py-2.5 text-sm rounded-lg cursor-pointer transition-colors text-[var(--text-primary)] aria-selected:bg-[rgba(var(--tertiary-rgb),0.1)] aria-selected:text-[var(--tertiary)]"
+                            className="flex items-center gap-3 px-3 py-2 text-sm rounded-lg cursor-pointer transition-colors text-[var(--text-primary)] aria-selected:bg-[rgba(var(--tertiary-rgb),0.1)] aria-selected:text-[var(--tertiary)]"
                         >
                             <FiFolder /> {t.nav.projects}
                         </Command.Item>
                         <Command.Item
                             onSelect={() => runCommand(() => router.push("#contact"))}
-                            className="flex items-center gap-3 px-3 py-2.5 text-sm rounded-lg cursor-pointer transition-colors text-[var(--text-primary)] aria-selected:bg-[rgba(var(--tertiary-rgb),0.1)] aria-selected:text-[var(--tertiary)]"
+                            className="flex items-center gap-3 px-3 py-2 text-sm rounded-lg cursor-pointer transition-colors text-[var(--text-primary)] aria-selected:bg-[rgba(var(--tertiary-rgb),0.1)] aria-selected:text-[var(--tertiary)]"
                         >
                             <FiMail /> {t.nav.contact}
                         </Command.Item>

@@ -1,16 +1,16 @@
 export const fr = {
     nav: {
-        about: "A propos de moi",
+        about: "Biographie",
         skills: "Compétences",
         experience: "Expériences",
         projects: "Projets",
         contact: "Contact",
         cv: "Mon CV",
-        hobbies: "Passions & Réalisations"
+        hobbies: "Passions & Succès"
     },
     header: {
         greeting: "Bonjour, je suis",
-        role: "Développeur Full-Stack",
+        role: "Full-Stack engineer",
         contactMe: "Me contacter",
         downloadCV: "Télécharger mon CV"
     },
@@ -19,10 +19,10 @@ export const fr = {
         title: "A propos de moi",
         description1: "Bonjour ! Je suis ",
         description1Name: "Guillaume Helg",
-        description2: ", un développeur passionné par les nouvelles technologies. J'ai {age} ans et j'aime créer des solutions innovantes et performantes.",
+        description2: ", un développeur passionné par les nouvelles technologies. J'ai 24 ans et j'aime créer des solutions innovantes et performantes.",
         experience: {
             title: "Expérience",
-            subtitle: "3+ ans"
+            subtitle: "5+ ans"
         },
         projects: {
             title: "Projets",
@@ -30,7 +30,7 @@ export const fr = {
         },
         education: {
             title: "Études",
-            subtitle: "Niveau Master"
+            subtitle: "5 ans d'études"
         },
         contactBtn: "Me contacter"
     },
@@ -60,6 +60,11 @@ export const fr = {
         statusCompleted: "Terminé",
         statusInProgress: "En cours",
         viewCredential: "Voir la certification"
+    },
+    recommendations: {
+        subtitle: "--- Ce que l'on dit de moi ---",
+        title: "Recommandations",
+        viewLink: "Voir le lien"
     },
     contact: {
         subtitle: "--- Besoin d'un développeur ? ---",

@@ -18,17 +18,17 @@
     --bg: #f8fafc;
     --bg-variant: rgba(226, 232, 240, 0.7);
     --primary-variant: #cbd5e1;
-    --tertiary: #0284c7;
-    /* High contrast blue */
-    --tertiary-rgb: 2, 132, 199;
+    --tertiary: #059669;
+    /* Emerald Green */
+    --tertiary-rgb: 5, 150, 105;
     --fontnew: #475569;
     /* Slate text */
     --black-v2: rgba(255, 255, 255, 0.85);
     --accent-purple: #6d28d9;
     /* High contrast purple */
     --accent-purple-rgb: 109, 40, 217;
-    --glow: rgba(2, 132, 199, 0.15);
-    --card-border: rgba(2, 132, 199, 0.18);
+    --glow: rgba(5, 150, 105, 0.15);
+    --card-border: rgba(5, 150, 105, 0.18);
     --text-primary: #0f172a;
     --glass-bg: rgba(255, 255, 255, 0.65);
     --glass-strong-bg: rgba(255, 255, 255, 0.85);

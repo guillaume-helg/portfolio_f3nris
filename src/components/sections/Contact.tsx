@@ -2,7 +2,7 @@
 
 import { MdOutlineEmail } from "react-icons/md";
 import { GoLocation } from "react-icons/go";
-import { RiTelegramLine } from "react-icons/ri";
+import { FaWhatsapp } from "react-icons/fa";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useTranslation } from "@/i18n/LanguageContext";
@@ -55,15 +55,15 @@ export default function Contact() {
                         </a>
                     </article>
 
-                    {/* Telegram */}
+                    {/* WhatsApp */}
                     <article className="glass rounded-2xl p-6 text-center glow-border-hover transition-all duration-300 group cursor-default">
-                        <RiTelegramLine className="text-2xl mb-3 mx-auto text-[var(--color-fontnew)] group-hover:text-[var(--color-tertiary)] transition-colors duration-300" />
-                        <h4>Telegram</h4>
+                        <FaWhatsapp className="text-2xl mb-3 mx-auto text-[var(--color-fontnew)] group-hover:text-[var(--color-tertiary)] transition-colors duration-300" />
+                        <h4>WhatsApp</h4>
                         <h5 className="text-[var(--color-fontnew)] text-sm mt-1">
-                            guillaume.helg@gmail.com
+                            +33 7 69 83 97 29
                         </h5>
                         <a
-                            href="https://t.me/OhLordGOAT"
+                            href="https://wa.me/33769839729"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-block text-sm mt-4 text-[var(--color-tertiary)] hover:underline hover:underline-offset-4"

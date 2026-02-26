@@ -22,7 +22,7 @@ export const en = {
         description2: ", a developer passionate about new technologies. I am {age} years old and love creating innovative and performant solutions.",
         experience: {
             title: "Experience",
-            subtitle: "3+ years"
+            subtitle: "5+ years"
         },
         projects: {
             title: "Projects",
@@ -30,7 +30,7 @@ export const en = {
         },
         education: {
             title: "Education",
-            subtitle: "Master's Degree"
+            subtitle: "5 years of study"
         },
         contactBtn: "Contact me"
     },
@@ -60,6 +60,11 @@ export const en = {
         statusCompleted: "Completed",
         statusInProgress: "In Progress",
         viewCredential: "View Credential"
+    },
+    recommendations: {
+        subtitle: "--- What people say ---",
+        title: "Recommendations",
+        viewLink: "View Link"
     },
     contact: {
         subtitle: "--- Need a developer? ---",
