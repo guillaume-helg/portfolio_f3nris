@@ -5,7 +5,8 @@ export const fr = {
         experience: "Expériences",
         projects: "Projets",
         contact: "Contact",
-        cv: "Mon CV"
+        cv: "Mon CV",
+        hobbies: "Passions & Réalisations"
     },
     header: {
         greeting: "Bonjour, je suis",
@@ -50,6 +51,15 @@ export const fr = {
         demo: "Démo",
         showMore: "Voir Plus",
         showLess: "Voir Moins"
+    },
+    extra: {
+        subtitle: "--- Que fais-je d'autre ? ---",
+        title: "Passions & Réalisations",
+        hobbiesTitle: "Mes Passions",
+        achievementsTitle: "Mes Certifications et Réalisations",
+        statusCompleted: "Terminé",
+        statusInProgress: "En cours",
+        viewCredential: "Voir la certification"
     },
     contact: {
         subtitle: "--- Besoin d'un développeur ? ---",

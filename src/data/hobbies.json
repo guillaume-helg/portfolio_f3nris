@@ -1,0 +1,44 @@
+[
+    {
+        "name": "Course à pied",
+        "nameEn": "Running",
+        "description": "Exploration",
+        "descriptionEn": "Exploration",
+        "icon": "run"
+    },
+    {
+        "name": "Musique",
+        "nameEn": "Music",
+        "description": "Guitare & Piano",
+        "descriptionEn": "Guitar & Piano",
+        "icon": "music"
+    },
+    {
+        "name": "Lecture",
+        "nameEn": "Reading",
+        "description": "Percy Jackson, Steve Jobs",
+        "descriptionEn": "Percy Jackson, Steve Jobs",
+        "icon": "book"
+    },
+    {
+        "name": "Vélo",
+        "nameEn": "Biking",
+        "description": "Nature",
+        "descriptionEn": "Nature trails",
+        "icon": "bike"
+    },
+    {
+        "name": "Marche",
+        "nameEn": "Walking",
+        "description": "En forêt",
+        "descriptionEn": "In the forest",
+        "icon": "walk"
+    },
+    {
+        "name": "Création",
+        "nameEn": "Creating",
+        "description": "Dessins & Projets",
+        "descriptionEn": "Drawings & Projects",
+        "icon": "create"
+    }
+]

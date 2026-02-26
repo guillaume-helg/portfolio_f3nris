@@ -47,3 +47,22 @@ export interface Education {
     description?: string;
     descriptionEn?: string;
 }
+
+export interface Hobby {
+    name: string;
+    nameEn?: string;
+    description?: string;
+    descriptionEn?: string;
+    icon: string;
+}
+
+export interface Achievement {
+    title: string;
+    titleEn?: string;
+    date: string;
+    dateEn?: string;
+    description?: string;
+    descriptionEn?: string;
+    status?: "completed" | "in-progress";
+    url?: string;
+}

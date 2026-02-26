@@ -34,7 +34,6 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
         localStorage.setItem("language", newLang);
     };
 
-    // Hydration fix
     if (!mounted) {
         return (
             <LanguageContext.Provider value={{ lang: "fr", setLang, t: dictionaries["fr"] }}>
