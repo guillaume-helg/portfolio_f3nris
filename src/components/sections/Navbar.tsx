@@ -22,6 +22,7 @@ export default function Navbar() {
         { href: "#skill", label: t.nav.skills },
         { href: "#experience", label: t.nav.experience },
         { href: "#project", label: t.nav.projects },
+        { href: "#hobbies", label: t.nav.hobbies },
         { href: "#contact", label: t.nav.contact },
     ];
 
