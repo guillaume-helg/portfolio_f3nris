@@ -5,10 +5,12 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineDownload } from "react-icons/hi";
 import Button from "@/components/ui/Button";
 import TypeWriter from "@/components/ui/TypeWriter";
+import { useTranslation } from "@/i18n/LanguageContext";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { getAssetPath } from "@/utils/paths";
 
 export default function Header() {
+    const { t } = useTranslation();
     const { ref: leftRef, isVisible: leftVisible } = useScrollReveal<HTMLDivElement>({ threshold: 0.2 });
     const { ref: rightRef, isVisible: rightVisible } = useScrollReveal<HTMLDivElement>({ threshold: 0.2, delay: 200 });
 
@@ -21,19 +23,20 @@ export default function Header() {
                     className={`w-2/5 flex flex-col justify-center flex-wrap gap-5 max-[720px]:w-[92%] max-[720px]:gap-6 max-[720px]:items-center scroll-reveal-left ${leftVisible ? "visible" : ""}`}
                 >
                     <h5 className="text-xs tracking-[5px] text-[var(--color-tertiary)] uppercase font-light">
-                        <TypeWriter text="Bonjour, je m'appelle" speed={60} delay={1800} />
+                        <TypeWriter text={t.header.greeting} speed={60} delay={1800} />
                     </h5>
                     <div>
-                        <h2 className="text-5xl font-bold text-gradient leading-tight max-[720px]:text-4xl">
+                        <h2 className="text-5xl font-bold text-gradient leading-tight max-[720px]:text-4xl text-transparent">
                             Guillaume HELG
                         </h2>
-                        <p className="text-lg font-medium text-gradient-purple mt-2 tracking-wide">
-                            Développeur Full-Stack
+                        <p className="text-lg font-medium text-gradient-purple mt-2 tracking-wide text-transparent">
+                            {t.header.role}
                         </p>
                     </div>
                     <p className="text-base text-[var(--color-fontnew)] leading-relaxed max-[720px]:text-left">
-                        Je suis un étudiant toulousain, qui poursuit ses études en tant que
-                        Miagiste, plus spécialisé dans le développement d&apos;applications.
+                        {t.about.description1}
+                        <span className="text-[var(--text-primary)] font-semibold">{t.about.description1Name}</span>
+                        {t.about.description2}
                     </p>
 
                     {/* Social links */}
@@ -44,8 +47,8 @@ export default function Header() {
                             rel="noopener noreferrer"
                             className="w-10 h-10 rounded-full glass flex items-center justify-center
                                 text-[var(--color-fontnew)] hover:text-[var(--color-tertiary)]
-                                hover:shadow-[0_0_15px_rgba(0,212,255,0.25)]
-                                hover:border-[rgba(0,212,255,0.3)]
+                                hover:shadow-[0_0_15px_rgba(var(--tertiary-rgb), 0.25)]
+                                hover:border-[rgba(var(--tertiary-rgb), 0.3)]
                                 transition-all duration-300"
                         >
                             <FaGithub className="text-lg" />
@@ -56,8 +59,8 @@ export default function Header() {
                             rel="noopener noreferrer"
                             className="w-10 h-10 rounded-full glass flex items-center justify-center
                                 text-[var(--color-fontnew)] hover:text-[var(--color-tertiary)]
-                                hover:shadow-[0_0_15px_rgba(0,212,255,0.25)]
-                                hover:border-[rgba(0,212,255,0.3)]
+                                hover:shadow-[0_0_15px_rgba(var(--tertiary-rgb), 0.25)]
+                                hover:border-[rgba(var(--tertiary-rgb), 0.3)]
                                 transition-all duration-300"
                         >
                             <FaLinkedin className="text-lg" />
@@ -66,11 +69,11 @@ export default function Header() {
 
                     {/* CTA buttons */}
                     <div className="flex items-center gap-4 flex-wrap">
-                        <Button href="#contact">Me contacter</Button>
+                        <Button href="#contact">{t.header.contactMe}</Button>
                         <Button href="/cv.pdf" download className="!text-[var(--color-fontnew)] !border-[rgba(176,196,222,0.2)] hover:!text-[var(--color-tertiary)]">
                             <span className="flex items-center gap-2">
                                 <HiOutlineDownload className="text-base" />
-                                Télécharger CV
+                                {t.header.downloadCV}
                             </span>
                         </Button>
                     </div>
@@ -86,11 +89,11 @@ export default function Header() {
                         <div
                             className="absolute inset-[-20px] rounded-full border border-dashed border-[var(--color-card-border)] animate-[orbit_20s_linear_infinite]"
                             style={{
-                                boxShadow: "0 0 15px rgba(0,212,255,0.05)",
+                                boxShadow: "0 0 15px rgba(var(--tertiary-rgb), 0.05)",
                             }}
                         >
                             {/* Orbiting dot */}
-                            <span className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-[var(--color-tertiary)] shadow-[0_0_10px_rgba(0,212,255,0.6)]" />
+                            <span className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-[var(--color-tertiary)] shadow-[0_0_10px_rgba(var(--tertiary-rgb), 0.6)]" />
                         </div>
 
                         {/* Pulsing glow behind avatar */}

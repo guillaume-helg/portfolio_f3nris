@@ -8,6 +8,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useCountUp } from "@/hooks/useCountUp";
+import { useTranslation } from "@/i18n/LanguageContext";
 import { getAssetPath } from "@/utils/paths";
 
 function calculateAge(birthDate: Date): number {
@@ -22,36 +23,37 @@ function calculateAge(birthDate: Date): number {
 
 const age = calculateAge(new Date("2002-01-06"));
 
-const stats = [
-    {
-        icon: FaAward,
-        label: "Expérience",
-        value: 2,
-        suffix: "+ ans",
-        detail: "en informatique",
-        href: "#experience",
-    },
-    {
-        icon: FiFolder,
-        label: "Projets",
-        value: 6,
-        suffix: "+",
-        detail: "menés à bien",
-        href: "#project",
-    },
-    {
-        icon: HiOutlineAcademicCap,
-        label: "Études",
-        value: 2,
-        suffix: "ème année",
-        detail: "après le bac",
-        href: "#skill",
-    },
-];
-
 export default function About() {
+    const { t } = useTranslation();
     const { ref: imageRef, isVisible: imageVisible } = useScrollReveal<HTMLDivElement>({ threshold: 0.15 });
     const { ref: contentRef, isVisible: contentVisible } = useScrollReveal<HTMLDivElement>({ threshold: 0.15, delay: 200 });
+
+    const stats = [
+        {
+            icon: FaAward,
+            label: t.about.experience.title,
+            value: 2,
+            suffix: "+",
+            detail: t.about.experience.subtitle,
+            href: "#experience",
+        },
+        {
+            icon: FiFolder,
+            label: t.about.projects.title,
+            value: 6,
+            suffix: "+",
+            detail: t.about.projects.subtitle,
+            href: "#project",
+        },
+        {
+            icon: HiOutlineAcademicCap,
+            label: t.about.education.title,
+            value: 2,
+            suffix: "+",
+            detail: t.about.education.subtitle,
+            href: "#skill",
+        },
+    ];
 
     const count0 = useCountUp(stats[0].value, 1200, contentVisible);
     const count1 = useCountUp(stats[1].value, 1200, contentVisible);
@@ -60,7 +62,7 @@ export default function About() {
 
     return (
         <section id="about" className="mt-12 py-8 pb-12 overflow-visible">
-            <SectionHeading subtitle="--- Me connaitre ---" title="A propos de moi" />
+            <SectionHeading subtitle={t.about.subtitle} title={t.about.title} />
 
             <div className="w-3/4 mx-auto grid grid-cols-[35%_50%] gap-[15%] max-lg:grid-cols-1 max-lg:gap-0 max-sm:grid-cols-1">
                 {/* Image */}
@@ -72,7 +74,7 @@ export default function About() {
                         {/* Gradient glow behind photo */}
                         <div className="absolute inset-[-6px] rounded-2xl bg-gradient-to-br from-[var(--color-tertiary)]/10 via-transparent to-[var(--color-accent-purple)]/10 animate-[pulse-glow_5s_ease-in-out_infinite] blur-sm" />
 
-                        <div className="relative w-full h-full rounded-2xl overflow-hidden rotate-[10deg] hover:rotate-0 transition-all duration-500 hover:shadow-[0_0_40px_rgba(0,212,255,0.15)] glass">
+                        <div className="relative w-full h-full rounded-2xl overflow-hidden rotate-[10deg] hover:rotate-0 transition-all duration-500 hover:shadow-[0_0_40px_rgba(var(--tertiary-rgb), 0.15)] glass">
                             <Image
                                 src={getAssetPath("/images/pdp/moi1.jpg")}
                                 alt="about me"
@@ -122,15 +124,13 @@ export default function About() {
                     <div className="my-10 max-lg:my-6 max-sm:my-6 flex gap-4">
                         <span className="hidden sm:block w-[2px] flex-shrink-0 bg-gradient-to-b from-[var(--color-tertiary)] to-[var(--color-accent-purple)] rounded-full opacity-40" />
                         <p className="text-[var(--color-fontnew)] max-sm:text-left leading-relaxed">
-                            Je m&apos;appelle Guillaume HELG. J&apos;ai {age} ans et
-                            j&apos;étudie actuellement en 2ième année de Licence MIASHS au sein
-                            de l&apos;université Paul Sabatier à Toulouse. Passionné
-                            d&apos;informatique, j&apos;aime réaliser des projets me permettant
-                            d&apos;acquérir de nouvelles compétences et connaissances.
+                            {t.about.description1}
+                            <span className="text-[var(--text-primary)] font-semibold">{t.about.description1Name}</span>
+                            {t.about.description2.replace("{age}", age.toString())}
                         </p>
                     </div>
 
-                    <Button href="#contact">Me contacter</Button>
+                    <Button href="#contact">{t.about.contactBtn}</Button>
                 </div>
             </div>
         </section>

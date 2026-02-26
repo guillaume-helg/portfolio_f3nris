@@ -19,23 +19,23 @@ export default function PageLoader() {
 
     return (
         <div
-            className={`fixed inset-0 z-[10000] flex items-center justify-center bg-[#06091a] transition-opacity duration-[600ms]
+            className={`fixed inset-0 z-[10000] flex items-center justify-center bg-[var(--bg)] transition-opacity duration-[600ms]
                 ${fadeOut ? "opacity-0" : "opacity-100"}`}
         >
             <div className="relative flex items-center justify-center">
                 {/* Outer ring */}
                 <div
                     className="absolute w-24 h-24 rounded-full border border-[var(--color-card-border)] animate-[orbit_2s_linear_infinite]"
-                    style={{ boxShadow: "0 0 20px rgba(0,212,255,0.1)" }}
+                    style={{ boxShadow: "0 0 20px rgba(var(--tertiary-rgb), 0.1)" }}
                 >
-                    <span className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-[var(--color-tertiary)] shadow-[0_0_10px_rgba(0,212,255,0.8)]" />
+                    <span className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-[var(--color-tertiary)] shadow-[0_0_10px_rgba(var(--tertiary-rgb), 0.8)]" />
                 </div>
 
                 {/* Middle ring — counter-rotate */}
                 <div
-                    className="absolute w-16 h-16 rounded-full border border-[rgba(124,58,237,0.2)] animate-[orbit_3s_linear_infinite_reverse]"
+                    className="absolute w-16 h-16 rounded-full border border-[rgba(var(--accent-purple-rgb), 0.2)] animate-[orbit_3s_linear_infinite_reverse]"
                 >
-                    <span className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-[var(--color-accent-purple)] shadow-[0_0_8px_rgba(124,58,237,0.8)]" />
+                    <span className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-[var(--color-accent-purple)] shadow-[0_0_8px_rgba(var(--accent-purple-rgb), 0.8)]" />
                 </div>
 
                 {/* Center text */}

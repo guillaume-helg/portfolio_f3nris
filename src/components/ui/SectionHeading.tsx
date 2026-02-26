@@ -15,9 +15,9 @@ export default function SectionHeading({ subtitle, title }: SectionHeadingProps)
             {/* Orbital accent line */}
             <div className="flex items-center justify-center gap-2 mt-4">
                 <span className="block w-8 h-[1px] bg-gradient-to-r from-transparent to-[var(--color-tertiary)] opacity-60" />
-                <span className="block w-2 h-2 rounded-full bg-[var(--color-tertiary)] animate-[pulse-glow_3s_ease-in-out_infinite] shadow-[0_0_8px_rgba(0,212,255,0.5)]" />
+                <span className="block w-2 h-2 rounded-full bg-[var(--color-tertiary)] animate-[pulse-glow_3s_ease-in-out_infinite] shadow-[0_0_8px_rgba(var(--tertiary-rgb), 0.5)]" />
                 <span className="block w-16 h-[1px] bg-[var(--color-tertiary)] opacity-40" />
-                <span className="block w-2 h-2 rounded-full bg-[var(--color-accent-purple)] animate-[pulse-glow_3s_ease-in-out_1.5s_infinite] shadow-[0_0_8px_rgba(124,58,237,0.5)]" />
+                <span className="block w-2 h-2 rounded-full bg-[var(--color-accent-purple)] animate-[pulse-glow_3s_ease-in-out_1.5s_infinite] shadow-[0_0_8px_rgba(var(--accent-purple-rgb), 0.5)]" />
                 <span className="block w-8 h-[1px] bg-gradient-to-l from-transparent to-[var(--color-accent-purple)] opacity-60" />
             </div>
         </div>

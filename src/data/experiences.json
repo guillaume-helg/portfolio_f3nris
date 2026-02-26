@@ -1,16 +1,27 @@
 [
     {
         "title": "Stagiaire à la DSI de ",
+        "titleEn": "IT Department Intern at ",
         "name": "Viasanté",
         "lieu": "Rodez, Aveyron, France",
+        "lieuEn": "Rodez, Aveyron, France",
         "date": "2022 Avril - Juin",
+        "dateEn": "2022 April - June",
         "resume": "J'ai adoré cette expérience, elle m'a permis d'en apprendre beaucoup sur le métier d'architecte SI, mais aussi sur de nombreux autres métiers que l'on peut retrouver au sein d'une DSI",
+        "resumeEn": "I loved this experience, it allowed me to learn a lot about the job of an IS architect, but also about many other jobs that can be found within an IT department",
         "point": [
             "Rédaction de documents",
             "Recensement d'applications et de technologies sur Hopex",
             "Travaux de recherche / réflexion sur la cartographie d'un SI",
             "Organisation et animation de réunions",
             "Modélisation de systèmes applicatifs"
+        ],
+        "pointEn": [
+            "Document drafting",
+            "Inventory of applications and technologies on Hopex",
+            "Research / reflection on IS mapping",
+            "Organization and animation of meetings",
+            "Modeling of application systems"
         ],
         "technologie": [
             "Xmind",
@@ -25,14 +36,23 @@
     },
     {
         "title": "Emploi saisonnier ",
+        "titleEn": "Seasonal Worker ",
         "name": "NOZ",
         "lieu": "Bozouls, Aveyron, France",
+        "lieuEn": "Bozouls, Aveyron, France",
         "date": "2021 et 2022 Juillet - Septembre",
+        "dateEn": "2021 & 2022 July - September",
         "resume": "Ce travail m'a permis de prendre conscience des conditions de travail que l'on peut retrouver dans des emplois pas forcément faciles, et me permet de confirmer que je souhaite bien faire du développement plus tard",
+        "resumeEn": "This job made me aware of the working conditions in tough manual jobs, and confirmed my desire to pursue a career in software development",
         "point": [
             "Répartition de colis",
             "Etiquetage de colis",
             "Déchargement de camion"
+        ],
+        "pointEn": [
+            "Package sorting",
+            "Package labeling",
+            "Truck unloading"
         ],
         "technologie": [
             "Terminal - Scanner",
@@ -44,15 +64,25 @@
     },
     {
         "title": "Stagiaire en classe de 3ième ",
+        "titleEn": "Middle School Intern ",
         "name": "Edokial",
         "lieu": "Bozouls, Aveyron, France",
+        "lieuEn": "Bozouls, Aveyron, France",
         "date": "2016 Janvier - Janvier",
+        "dateEn": "2016 January - January",
         "resume": "1ère réelle expérience en entreprise, j'ai beaucoup apprécié la faire et beaucoup appris des multiples collaborateurs qui m'ont encadré au sein d'Edokial",
+        "resumeEn": "First real corporate experience, I really enjoyed it and learned a lot from the many colleagues who mentored me at Edokial",
         "point": [
             "Visite des locaux",
             "Découverte des corps métiers de l'entreprise",
             "Rangement d'archives",
             "Exposé et compte rendu à l'école"
+        ],
+        "pointEn": [
+            "Office tour",
+            "Discovery of the company's core professions",
+            "Organizing archives",
+            "School presentation and essay"
         ],
         "technologie": [
             "Power Point",
@@ -63,15 +93,25 @@
     },
     {
         "title": "Jardinier à temps perdu ",
+        "titleEn": "Freelance Gardener ",
         "name": "Particuliers",
         "lieu": "Bozouls, Aveyron, France",
+        "lieuEn": "Bozouls, Aveyron, France",
         "date": "2015 - 2022",
+        "dateEn": "2015 - 2022",
         "resume": "Il est bien de varier les activités, afin d'apprendre à se connaitre. Je ne pense pas qu'il y ait meilleure manière pour se lancer dans ses premières activités professionnelles",
+        "resumeEn": "It is good to vary activities in order to learn about oneself. I don't think there is a better way to start one's first professional activities",
         "point": [
             "Entretien de pelouse",
             "Entretien de haie",
             "Jardinnage",
             "Arrosage"
+        ],
+        "pointEn": [
+            "Lawn maintenance",
+            "Hedge trimming",
+            "Gardening",
+            "Watering"
         ],
         "technologie": [
             "Tondeuse",

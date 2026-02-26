@@ -5,11 +5,13 @@ import experiences from "@/data/experiences.json";
 import type { Experience as ExperienceType } from "@/types";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { useTranslation } from "@/i18n/LanguageContext";
 import { getAssetPath } from "@/utils/paths";
 
-const typedExperiences: ExperienceType[] = experiences;
+const typedExperiences: ExperienceType[] = experiences as ExperienceType[];
 
 export default function Experience() {
+    const { t, lang } = useTranslation();
     const { ref, isVisible } = useScrollReveal<HTMLElement>({ threshold: 0.05 });
 
     return (
@@ -18,7 +20,7 @@ export default function Experience() {
             id="experience"
             className={`mt-12 py-8 flex flex-col items-center scroll-reveal ${isVisible ? "visible" : ""}`}
         >
-            <SectionHeading subtitle="--- Mon parcours ---" title="Expériences" />
+            <SectionHeading subtitle={t.experience.subtitle} title={t.experience.title} />
 
             {/* Timeline */}
             <ul className="relative max-w-[1200px] mx-auto my-[100px] max-sm:my-[50px]
@@ -26,7 +28,7 @@ export default function Experience() {
                 after:bg-gradient-to-b after:from-[var(--color-tertiary)] after:via-[var(--color-accent-purple)] after:to-[var(--color-tertiary)]
                 after:top-0 after:left-1/2 after:-ml-[1px] after:z-[-1]
                 after:animate-[moveline_6s_linear_forwards]
-                after:shadow-[0_0_10px_rgba(0,212,255,0.3)]
+                after:shadow-[0_0_10px_rgba(var(--tertiary-rgb), 0.3)]
                 max-sm:after:left-[31px]"
             >
                 {typedExperiences.map((experience, index) => {
@@ -43,9 +45,9 @@ export default function Experience() {
                                 alt={experience.name}
                                 width={40}
                                 height={40}
-                                className={`absolute w-10 h-10 rounded-full z-10 bg-[#06091a] top-8 object-contain p-1
+                                className={`absolute w-10 h-10 rounded-full z-10 bg-[var(--bg)] top-8 object-contain p-1
                                     border-2 border-[var(--color-tertiary)]
-                                    shadow-[0_0_12px_rgba(0,212,255,0.4)]
+                                    shadow-[0_0_12px_rgba(var(--tertiary-rgb), 0.4)]
                                     ${isLeft
                                         ? "right-[-20px] max-sm:left-[10px]"
                                         : "left-[-20px] max-sm:left-[10px]"
@@ -56,12 +58,14 @@ export default function Experience() {
                             <li className="py-5 px-[30px] glass-strong relative rounded-2xl text-[15px] max-sm:text-[13px] list-none
                                 glow-border-hover transition-all duration-300">
                                 <h4 className="font-semibold">
-                                    {experience.title} @{experience.name}
+                                    {lang === 'en' ? experience.titleEn : experience.title} @{experience.name}
                                 </h4>
                                 <small className="inline-block mb-4 max-sm:mb-2.5 text-[var(--color-tertiary)]">
-                                    {experience.date}
+                                    {lang === 'en' ? experience.dateEn : experience.date}
                                 </small>
-                                <p className="text-[var(--color-fontnew)]">{experience.resume}</p>
+                                <p className="text-[var(--color-fontnew)]">
+                                    {lang === 'en' ? experience.resumeEn : experience.resume}
+                                </p>
                             </li>
 
                             {/* Arrow */}

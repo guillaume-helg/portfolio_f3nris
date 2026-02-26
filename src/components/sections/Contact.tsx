@@ -5,8 +5,10 @@ import { GoLocation } from "react-icons/go";
 import { RiTelegramLine } from "react-icons/ri";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { useTranslation } from "@/i18n/LanguageContext";
 
 export default function Contact() {
+    const { t } = useTranslation();
     const { ref, isVisible } = useScrollReveal<HTMLElement>({ threshold: 0.1 });
 
     return (
@@ -15,7 +17,7 @@ export default function Contact() {
             id="contact"
             className={`mt-12 py-8 scroll-reveal-scale ${isVisible ? "visible" : ""}`}
         >
-            <SectionHeading subtitle="--- Prenons contact ---" title="Me contacter" />
+            <SectionHeading subtitle={t.contact.subtitle} title={t.contact.title} />
 
             <div className="w-3/4 mx-auto flex justify-center flex-wrap gap-[10%]">
                 <div className="flex flex-row flex-wrap justify-center gap-5">
@@ -32,7 +34,7 @@ export default function Contact() {
                             rel="noopener noreferrer"
                             className="inline-block text-sm mt-4 text-[var(--color-tertiary)] hover:underline hover:underline-offset-4"
                         >
-                            Envoyer un mail
+                            {t.contact.send}
                         </a>
                     </article>
 
@@ -66,7 +68,7 @@ export default function Contact() {
                             rel="noopener noreferrer"
                             className="inline-block text-sm mt-4 text-[var(--color-tertiary)] hover:underline hover:underline-offset-4"
                         >
-                            Envoyer un message
+                            {t.contact.send}
                         </a>
                     </article>
                 </div>

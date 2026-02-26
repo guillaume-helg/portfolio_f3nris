@@ -63,26 +63,26 @@ export default function CustomCursor() {
         <>
             {/* Inner dot */}
             <div
-                className={`fixed pointer-events-none z-[9999] rounded-full transition-opacity duration-300 mix-blend-screen
+                className={`fixed pointer-events-none z-[9999] rounded-full transition-opacity duration-300
                     ${isVisible ? "opacity-100" : "opacity-0"}
                     ${isHovering ? "w-2 h-2" : "w-1.5 h-1.5"}`}
                 style={{
                     left: position.x - (isHovering ? 4 : 3),
                     top: position.y - (isHovering ? 4 : 3),
-                    background: "#00d4ff",
-                    boxShadow: "0 0 8px rgba(0,212,255,0.8), 0 0 20px rgba(0,212,255,0.3)",
+                    background: "rgb(var(--tertiary-rgb))",
+                    boxShadow: "0 0 8px rgba(var(--tertiary-rgb), 0.8), 0 0 20px rgba(var(--tertiary-rgb), 0.3)",
                 }}
             />
             {/* Trailing ring */}
             <div
-                className={`fixed pointer-events-none z-[9998] rounded-full transition-all mix-blend-screen
+                className={`fixed pointer-events-none z-[9998] rounded-full transition-all
                     ${isVisible ? "opacity-100" : "opacity-0"}
-                    ${isHovering ? "w-10 h-10 border-[var(--color-tertiary)]" : "w-8 h-8 border-[rgba(0,212,255,0.3)]"}`}
+                    ${isHovering ? "w-10 h-10 border-[var(--color-tertiary)]" : "w-8 h-8 border-[rgba(var(--tertiary-rgb), 0.3)]"}`}
                 style={{
                     left: trailPosition.x - (isHovering ? 20 : 16),
                     top: trailPosition.y - (isHovering ? 20 : 16),
-                    border: isHovering ? "1.5px solid rgba(0,212,255,0.6)" : "1px solid rgba(0,212,255,0.25)",
-                    boxShadow: isHovering ? "0 0 15px rgba(0,212,255,0.2)" : "none",
+                    border: isHovering ? "1.5px solid rgba(var(--tertiary-rgb), 0.6)" : "1px solid rgba(var(--tertiary-rgb), 0.25)",
+                    boxShadow: isHovering ? "0 0 15px rgba(var(--tertiary-rgb), 0.2)" : "none",
                     transitionDuration: isHovering ? "200ms" : "0ms",
                 }}
             />

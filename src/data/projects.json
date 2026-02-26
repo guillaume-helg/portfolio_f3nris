@@ -5,6 +5,7 @@
         "logo": "/images/logowbg.png",
         "title": "Portfolio",
         "date": "1er Novembre 2022 - 1er Janvier 2022",
+        "dateEn": "November 1st 2022 - January 1st 2022",
         "tech": [
             "VSCode",
             "Javascript",
@@ -16,6 +17,7 @@
             "Figma"
         ],
         "description": "Conception d'un site dans l'objectif de me représenter moi et mon parcours dans l'informatique, ainsi que de pratiquer les différentes technologies web",
+        "descriptionEn": "Designing a website to represent myself and my journey in computer science, as well as to practice various web technologies",
         "github": "https://gitlab.com/lc31/portfolio"
     },
     {
@@ -24,6 +26,7 @@
         "logo": "/images/logowbg.png",
         "title": "QuizzAnime",
         "date": "1er Mars 2022 - En cours",
+        "dateEn": "March 1st 2022 - Ongoing",
         "tech": [
             "Java",
             "XML",
@@ -32,6 +35,7 @@
             "Gitlab"
         ],
         "description": "Application Android à destination de jeu sous forme de quiz, dont l'objectif est de deviner la musique que l'application est en train de jouer",
+        "descriptionEn": "Android game application in the form of a quiz, where the goal is to guess the music the application is currently playing",
         "github": "https://gitlab.com/ghelg/QuizzAnime"
     },
     {
@@ -40,6 +44,7 @@
         "logo": "/images/logowbg.png",
         "title": "Outil Cuisson",
         "date": "1er Mars 2022 - 1er Avril 2022",
+        "dateEn": "March 1st 2022 - April 1st 2022",
         "tech": [
             "Java",
             "XML",
@@ -47,6 +52,7 @@
             "Gitlab"
         ],
         "description": "Application permettant de sauvegarder, de lister, et de modifier les informations de plats pour lesquels on va récupérer des informations comme la température de cuisson, et le temps de cuisson",
+        "descriptionEn": "Application to save, list, and modify dish information, recovering data such as cooking temperature and cooking time",
         "github": "https://gitlab.com/ghelg/Projet_Dut_OutilCuisson"
     },
     {
@@ -54,7 +60,9 @@
         "image": "/images/projet/img1.webp",
         "logo": "/images/logowbg.png",
         "title": "Jeu de la dame de pique",
+        "titleEn": "Hearts Card Game",
         "date": "Février 2021 - Juin 2021",
+        "dateEn": "February 2021 - June 2021",
         "tech": [
             "Java",
             "Intellij Idea",
@@ -64,6 +72,7 @@
             "Microsoft project"
         ],
         "description": "Application qui reproduit le jeu de la Dame de Pique développée en java et se jouant sur le terminal à 4 joueurs dont 3 joueurs robots",
+        "descriptionEn": "Terminal application reproducing the Hearts card game developed in Java, played with 4 players including 3 bots",
         "github": "https://gitlab.com/ghelg/ProjetJeuDameDePique"
     },
     {
@@ -71,7 +80,9 @@
         "image": "/images/projet/img1.webp",
         "logo": "/images/logowbg.png",
         "title": "Ajustement dynamique de la masse logicielle d'un système GNU/Linux",
+        "titleEn": "Dynamic adjustment of GNU/Linux software footprint",
         "date": "20 Octobre 2021 - 30 Mars 2022",
+        "dateEn": "October 20th 2021 - March 30th 2022",
         "tech": [
             "Debian",
             "Bash",
@@ -81,6 +92,7 @@
             "Vim"
         ],
         "description": "Projet qui consiste à alléger les paquets qui ne sont pas nécessaires à différents profils imaginés par mon équipe et moi sur une machine virtuelle Debian lancée par VirtualBox",
+        "descriptionEn": "Project consisting of lightening unnecessary packages for different profiles designed by my team and me on a Debian virtual machine running on VirtualBox",
         "github": "https://gitlab.com/ghelg/ProjetS3S4-Allo-memoire"
     }
 ]

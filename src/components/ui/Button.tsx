@@ -16,9 +16,9 @@ export default function Button({ href, children, download, className = "" }: But
                 bg-white/5 backdrop-blur-md
                 border border-[var(--color-card-border)]
                 text-[var(--color-tertiary)]
-                hover:border-[rgba(0,212,255,0.4)]
-                hover:bg-[rgba(0,212,255,0.08)]
-                hover:shadow-[0_0_25px_rgba(0,212,255,0.2)]
+                hover:border-[rgba(var(--tertiary-rgb), 0.4)]
+                hover:bg-[rgba(var(--tertiary-rgb), 0.08)]
+                hover:shadow-[0_0_25px_rgba(var(--tertiary-rgb), 0.2)]
                 hover:scale-[1.03]
                 active:scale-[0.98]
                 transition-all duration-300 ease-out

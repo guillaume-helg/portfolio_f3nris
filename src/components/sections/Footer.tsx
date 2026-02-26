@@ -1,16 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import { FiLinkedin, FiDribbble, FiGithub } from "react-icons/fi";
 import { getAssetPath } from "@/utils/paths";
+import { useTranslation } from "@/i18n/LanguageContext";
 
 const currentYear = new Date().getFullYear();
-
-const footerLinks = [
-    { href: "#about", label: "A propos" },
-    { href: "#skill", label: "Compétences" },
-    { href: "#experience", label: "Expériences" },
-    { href: "#project", label: "Projets" },
-    { href: "#contact", label: "Contact" },
-];
 
 const socialLinks = [
     { href: "https://www.linkedin.com/in/guillaume-helg/", icon: FiLinkedin, label: "LinkedIn" },
@@ -19,6 +14,16 @@ const socialLinks = [
 ];
 
 export default function Footer() {
+    const { t } = useTranslation();
+
+    const footerLinks = [
+        { href: "#about", label: t.nav.about },
+        { href: "#skill", label: t.nav.skills },
+        { href: "#experience", label: t.nav.experience },
+        { href: "#project", label: t.nav.projects },
+        { href: "#contact", label: t.nav.contact },
+    ];
+
     return (
         <footer className="relative mt-8 w-full">
             {/* Gradient top border */}
@@ -61,8 +66,8 @@ export default function Footer() {
                                         aria-label={social.label}
                                         className="w-9 h-9 rounded-full glass flex items-center justify-center
                                             text-[var(--color-fontnew)] hover:text-[var(--color-tertiary)]
-                                            hover:shadow-[0_0_12px_rgba(0,212,255,0.25)]
-                                            hover:border-[rgba(0,212,255,0.3)]
+                                            hover:shadow-[0_0_12px_rgba(var(--tertiary-rgb), 0.25)]
+                                            hover:border-[rgba(var(--tertiary-rgb), 0.3)]
                                             transition-all duration-300"
                                     >
                                         <Icon className="text-sm" />
@@ -77,7 +82,7 @@ export default function Footer() {
 
                     {/* Bottom row: Copyright */}
                     <div className="text-center text-[var(--color-fontnew)] text-xs tracking-wide opacity-70">
-                        © {currentYear} Guillaume HELG — Tous droits réservés
+                        © {currentYear} Guillaume HELG — {t.footer.rights}
                     </div>
                 </div>
             </div>
