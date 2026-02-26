@@ -66,3 +66,17 @@ export interface Achievement {
     status?: "completed" | "in-progress";
     url?: string;
 }
+
+export interface Recommendation {
+    id: number;
+    company: string;
+    companyEn?: string;
+    date: string;
+    dateEn?: string;
+    text: string;
+    textEn?: string;
+    author?: string;
+    role?: string;
+    roleEn?: string;
+    url?: string;
+}

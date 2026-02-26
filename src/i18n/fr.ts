@@ -61,6 +61,11 @@ export const fr = {
         statusInProgress: "En cours",
         viewCredential: "Voir la certification"
     },
+    recommendations: {
+        subtitle: "--- Ce que l'on dit de moi ---",
+        title: "Recommandations",
+        viewLink: "Voir le lien"
+    },
     contact: {
         subtitle: "--- Besoin d'un développeur ? ---",
         title: "Me contacter",
