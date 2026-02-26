@@ -15,7 +15,7 @@ function ProjectCard({ project, index }: { project: ProjectType; index: number }
     const [isHovered, setIsHovered] = useState(false);
     const { ref: revealRef, isVisible } = useScrollReveal<HTMLDivElement>({
         threshold: 0.1,
-        delay: (index % 3) * 100 // Stagger based on column for better flow
+        delay: (index % 3) * 100
     });
 
     return (

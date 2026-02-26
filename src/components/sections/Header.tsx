@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { HiOutlineDownload } from "react-icons/hi";
 import Button from "@/components/ui/Button";
 import TypeWriter from "@/components/ui/TypeWriter";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
@@ -11,25 +13,66 @@ export default function Header() {
     const { ref: rightRef, isVisible: rightVisible } = useScrollReveal<HTMLDivElement>({ threshold: 0.2, delay: 200 });
 
     return (
-        <header className="h-max pt-32 overflow-hidden mt-40 px-[100px] max-[720px]:px-4">
+        <header className="h-max pt-32 pb-16 mt-40 px-[100px] max-[720px]:px-4">
             <div className="w-3/4 mx-auto flex flex-row flex-wrap justify-between items-center max-[720px]:flex-col-reverse max-[720px]:items-center max-[720px]:gap-16">
                 {/* Presentation */}
                 <div
                     ref={leftRef}
-                    className={`w-2/5 flex flex-col justify-center flex-wrap gap-5 max-[720px]:w-[92%] max-[720px]:gap-8 max-[720px]:items-center scroll-reveal-left ${leftVisible ? "visible" : ""}`}
+                    className={`w-2/5 flex flex-col justify-center flex-wrap gap-5 max-[720px]:w-[92%] max-[720px]:gap-6 max-[720px]:items-center scroll-reveal-left ${leftVisible ? "visible" : ""}`}
                 >
                     <h5 className="text-xs tracking-[5px] text-[var(--color-tertiary)] uppercase font-light">
                         <TypeWriter text="Bonjour, je m'appelle" speed={60} delay={1800} />
                     </h5>
-                    <h2 className="text-4xl font-bold text-gradient leading-tight">
-                        Guillaume HELG
-                    </h2>
+                    <div>
+                        <h2 className="text-5xl font-bold text-gradient leading-tight max-[720px]:text-4xl">
+                            Guillaume HELG
+                        </h2>
+                        <p className="text-lg font-medium text-gradient-purple mt-2 tracking-wide">
+                            Développeur Full-Stack
+                        </p>
+                    </div>
                     <p className="text-base text-[var(--color-fontnew)] leading-relaxed max-[720px]:text-left">
                         Je suis un étudiant toulousain, qui poursuit ses études en tant que
                         Miagiste, plus spécialisé dans le développement d&apos;applications.
                     </p>
-                    <div>
+
+                    {/* Social links */}
+                    <div className="flex items-center gap-4">
+                        <a
+                            href="https://github.com/guillaume-helg"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-10 h-10 rounded-full glass flex items-center justify-center
+                                text-[var(--color-fontnew)] hover:text-[var(--color-tertiary)]
+                                hover:shadow-[0_0_15px_rgba(0,212,255,0.25)]
+                                hover:border-[rgba(0,212,255,0.3)]
+                                transition-all duration-300"
+                        >
+                            <FaGithub className="text-lg" />
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/in/guillaume-helg/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-10 h-10 rounded-full glass flex items-center justify-center
+                                text-[var(--color-fontnew)] hover:text-[var(--color-tertiary)]
+                                hover:shadow-[0_0_15px_rgba(0,212,255,0.25)]
+                                hover:border-[rgba(0,212,255,0.3)]
+                                transition-all duration-300"
+                        >
+                            <FaLinkedin className="text-lg" />
+                        </a>
+                    </div>
+
+                    {/* CTA buttons */}
+                    <div className="flex items-center gap-4 flex-wrap">
                         <Button href="#contact">Me contacter</Button>
+                        <Button href="/cv.pdf" download className="!text-[var(--color-fontnew)] !border-[rgba(176,196,222,0.2)] hover:!text-[var(--color-tertiary)]">
+                            <span className="flex items-center gap-2">
+                                <HiOutlineDownload className="text-base" />
+                                Télécharger CV
+                            </span>
+                        </Button>
                     </div>
                 </div>
 
@@ -38,7 +81,7 @@ export default function Header() {
                     ref={rightRef}
                     className={`w-2/5 flex justify-center max-[720px]:w-[92%] scroll-reveal-right ${rightVisible ? "visible" : ""}`}
                 >
-                    <div className="relative">
+                    <div className="relative animate-[float_6s_ease-in-out_infinite]">
                         {/* Orbital ring */}
                         <div
                             className="absolute inset-[-20px] rounded-full border border-dashed border-[var(--color-card-border)] animate-[orbit_20s_linear_infinite]"
