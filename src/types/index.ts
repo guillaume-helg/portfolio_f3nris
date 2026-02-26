@@ -25,6 +25,7 @@ export interface Skill {
     num: number;
     img: string;
     title: string;
+    category: string;
 }
 
 export interface Education {
@@ -32,4 +33,5 @@ export interface Education {
     name: string;
     lieu: string;
     date: string;
+    description?: string;
 }

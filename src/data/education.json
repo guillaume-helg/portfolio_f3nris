@@ -1,20 +1,23 @@
 [
     {
-        "title": "Etudiant Miagiste ",
+        "title": "Etudiant Miagiste",
         "name": "Licence MIAGE, Université Paul Sabatier",
         "lieu": "31400 Toulouse, Haute Garonne, France",
-        "date": "2022"
+        "date": "2022",
+        "description": "Spécialisation MIAGE — Méthodes Informatiques Appliquées à la Gestion des Entreprises"
     },
     {
-        "title": "Etudiant en informatique ",
-        "name": "IUT de rodez",
+        "title": "Etudiant en informatique",
+        "name": "IUT de Rodez",
         "lieu": "Rodez (12), Aveyron, France",
-        "date": "2020"
+        "date": "2020",
+        "description": "DUT Informatique — Développement, bases de données et systèmes"
     },
     {
-        "title": "Lycéen en filière STI2D ",
+        "title": "Lycéen en filière STI2D",
         "name": "Alexis Monteil",
         "lieu": "Rodez (12), Aveyron, France",
-        "date": "2017"
+        "date": "2017",
+        "description": "Baccalauréat STI2D — Sciences et Technologies de l'Industrie et du Développement Durable"
     }
 ]
