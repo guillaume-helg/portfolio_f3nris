@@ -66,12 +66,12 @@ export default function StarField() {
                 style={{
                     transform: `translateY(${scrollY * 0.1}px)`,
                     backgroundImage:
-                        "radial-gradient(2px 2px at 33% 28%, rgba(0,212,255,0.6), transparent)," +
-                        "radial-gradient(2px 2px at 66% 65%, rgba(0,212,255,0.5), transparent)," +
-                        "radial-gradient(2px 2px at 12% 75%, rgba(124,58,237,0.5), transparent)," +
-                        "radial-gradient(2px 2px at 88% 35%, rgba(0,212,255,0.4), transparent)," +
-                        "radial-gradient(2px 2px at 45% 92%, rgba(124,58,237,0.6), transparent)," +
-                        "radial-gradient(2px 2px at 72% 8%, rgba(0,212,255,0.5), transparent)," +
+                        "radial-gradient(2px 2px at 33% 28%, rgba(var(--tertiary-rgb), 0.6), transparent)," +
+                        "radial-gradient(2px 2px at 66% 65%, rgba(var(--tertiary-rgb), 0.5), transparent)," +
+                        "radial-gradient(2px 2px at 12% 75%, rgba(var(--accent-purple-rgb), 0.5), transparent)," +
+                        "radial-gradient(2px 2px at 88% 35%, rgba(var(--tertiary-rgb), 0.4), transparent)," +
+                        "radial-gradient(2px 2px at 45% 92%, rgba(var(--accent-purple-rgb), 0.6), transparent)," +
+                        "radial-gradient(2px 2px at 72% 8%, rgba(var(--tertiary-rgb), 0.5), transparent)," +
                         "radial-gradient(2.5px 2.5px at 50% 50%, rgba(255,255,255,0.8), transparent)",
                     backgroundSize: "100% 100%",
                 }}
@@ -82,8 +82,8 @@ export default function StarField() {
                 className="absolute inset-0 opacity-30"
                 style={{
                     background:
-                        "radial-gradient(ellipse at 25% 25%, rgba(124,58,237,0.08) 0%, transparent 50%)," +
-                        "radial-gradient(ellipse at 75% 75%, rgba(0,212,255,0.06) 0%, transparent 50%)",
+                        "radial-gradient(ellipse at 25% 25%, rgba(var(--accent-purple-rgb), 0.08) 0%, transparent 50%)," +
+                        "radial-gradient(ellipse at 75% 75%, rgba(var(--tertiary-rgb), 0.06) 0%, transparent 50%)",
                 }}
             />
         </div>

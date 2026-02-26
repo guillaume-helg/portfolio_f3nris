@@ -1,23 +1,35 @@
 [
     {
         "title": "Etudiant Miagiste",
+        "titleEn": "MIAGE Student",
         "name": "Licence MIAGE, Université Paul Sabatier",
+        "nameEn": "MIAGE Bachelor's, Paul Sabatier University",
         "lieu": "31400 Toulouse, Haute Garonne, France",
+        "lieuEn": "Toulouse, Haute Garonne, France",
         "date": "2022",
-        "description": "Spécialisation MIAGE — Méthodes Informatiques Appliquées à la Gestion des Entreprises"
+        "description": "Spécialisation MIAGE — Méthodes Informatiques Appliquées à la Gestion des Entreprises",
+        "descriptionEn": "MIAGE Specialization — Applied Computer Methods for Business Management"
     },
     {
         "title": "Etudiant en informatique",
+        "titleEn": "Computer Science Student",
         "name": "IUT de Rodez",
+        "nameEn": "Rodez Institute of Technology",
         "lieu": "Rodez (12), Aveyron, France",
+        "lieuEn": "Rodez, Aveyron, France",
         "date": "2020",
-        "description": "DUT Informatique — Développement, bases de données et systèmes"
+        "description": "DUT Informatique — Développement, bases de données et systèmes",
+        "descriptionEn": "Two-year University Degree in Computer Science — Development, Databases and Systems"
     },
     {
         "title": "Lycéen en filière STI2D",
+        "titleEn": "High School Student in STI2D",
         "name": "Alexis Monteil",
+        "nameEn": "Alexis Monteil High School",
         "lieu": "Rodez (12), Aveyron, France",
+        "lieuEn": "Rodez, Aveyron, France",
         "date": "2017",
-        "description": "Baccalauréat STI2D — Sciences et Technologies de l'Industrie et du Développement Durable"
+        "description": "Baccalauréat STI2D — Sciences et Technologies de l'Industrie et du Développement Durable",
+        "descriptionEn": "STI2D Baccalaureate — Industry and Sustainable Development Sciences and Technologies"
     }
 ]

@@ -1,17 +1,19 @@
 "use client";
 
-import { useRef, useCallback, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import projects from "@/data/projects.json";
 import type { Project as ProjectType } from "@/types";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { useTranslation } from "@/i18n/LanguageContext";
 import { getAssetPath } from "@/utils/paths";
 
-const typedProjects: ProjectType[] = projects;
+const typedProjects: ProjectType[] = projects as ProjectType[];
 
 function ProjectCard({ project, index }: { project: ProjectType; index: number }) {
+    const { t, lang } = useTranslation();
     const [isHovered, setIsHovered] = useState(false);
     const { ref: revealRef, isVisible } = useScrollReveal<HTMLDivElement>({
         threshold: 0.1,
@@ -51,10 +53,10 @@ function ProjectCard({ project, index }: { project: ProjectType; index: number }
                     <div className="flex justify-between items-start">
                         <div className="flex-1 mr-4">
                             <span className="text-xs font-mono text-[var(--color-tertiary)] font-bold uppercase tracking-widest mb-1 shadow-sm block">
-                                {project.date}
+                                {lang === 'en' && project.dateEn ? project.dateEn : project.date}
                             </span>
                             <h3 className="text-2xl font-bold text-white group-hover:text-[var(--color-tertiary)] transition-colors duration-300 drop-shadow-md">
-                                {project.title}
+                                {lang === 'en' && project.titleEn ? project.titleEn : project.title}
                             </h3>
                         </div>
                         <div className="w-12 h-12 relative group-hover:scale-110 transition-transform duration-300 shadow-glow rounded-xl overflow-hidden bg-white/5 p-1.5 border border-white/10 backdrop-blur-sm">
@@ -64,12 +66,12 @@ function ProjectCard({ project, index }: { project: ProjectType; index: number }
 
                     {/* Middle: Tech Stack - More visible by default */}
                     <div className="flex flex-wrap gap-2 mt-4 transition-all duration-500">
-                        {project.tech.map((tech, idx) => (
+                        {project.tech.map((tech: string, idx: number) => (
                             <span
                                 key={idx}
                                 className={`px-2.5 py-1 text-[11px] font-mono border rounded transition-all duration-500
                                     ${isHovered
-                                        ? "border-[var(--color-tertiary)] bg-[var(--color-tertiary)]/15 text-white shadow-[0_0_10px_rgba(0,212,255,0.2)]"
+                                        ? "border-[var(--color-tertiary)] bg-[var(--color-tertiary)]/15 text-white shadow-[0_0_10px_rgba(var(--tertiary-rgb), 0.2)]"
                                         : "border-white/20 bg-black/30 text-white/90"}`}
                             >
                                 {tech}
@@ -81,14 +83,14 @@ function ProjectCard({ project, index }: { project: ProjectType; index: number }
                     <div className="mt-auto">
                         <p className={`text-sm text-white/90 leading-relaxed mb-6 transition-all duration-500 
                             ${isHovered ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 md:opacity-0"}`}>
-                            {project.description}
+                            {lang === 'en' && project.descriptionEn ? project.descriptionEn : project.description}
                         </p>
 
                         <div className={`flex items-center justify-between transition-all duration-500 delay-75
                             ${isHovered ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 shadow-none"}`}>
                             <Button href={project.github} className="w-full justify-center group/btn shadow-xl">
                                 <span className="flex items-center gap-2">
-                                    Voir le projet
+                                    {t.projects.github}
                                     <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current transition-transform group-hover/btn:translate-x-1" xmlns="http://www.w3.org/2000/svg"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" /></svg>
                                 </span>
                             </Button>
@@ -106,9 +108,9 @@ function ProjectCard({ project, index }: { project: ProjectType; index: number }
 const INITIAL_VISIBLE_COUNT = 3;
 
 export default function Project() {
+    const { t } = useTranslation();
     const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE_COUNT);
     const hasMore = typedProjects.length > visibleCount;
-    const isShowingAll = visibleCount >= typedProjects.length && typedProjects.length > INITIAL_VISIBLE_COUNT;
 
     const toggleProjects = () => {
         if (hasMore) {
@@ -131,8 +133,8 @@ export default function Project() {
 
             <div className="container mx-auto px-6">
                 <SectionHeading
-                    subtitle="--- Mes différents travaux ---"
-                    title="Mes Projets"
+                    subtitle={t.projects.subtitle}
+                    title={t.projects.title}
                 />
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-20">
@@ -146,10 +148,10 @@ export default function Project() {
                     <div className="mt-16 flex justify-center">
                         <button
                             onClick={toggleProjects}
-                            className="group relative px-8 py-4 bg-white/5 border border-[var(--color-card-border)] rounded-full text-white font-medium hover:bg-[var(--color-tertiary)]/10 hover:border-[var(--color-tertiary)] transition-all duration-300 shadow-lg hover:shadow-[0_0_30px_rgba(0,212,255,0.2)]"
+                            className="group relative px-8 py-4 bg-white/5 border border-[var(--color-card-border)] rounded-full text-white font-medium hover:bg-[var(--color-tertiary)]/10 hover:border-[var(--color-tertiary)] transition-all duration-300 shadow-lg hover:shadow-[0_0_30px_rgba(var(--tertiary-rgb), 0.2)]"
                         >
                             <span className="relative flex items-center gap-2">
-                                {hasMore ? "Afficher plus de projets" : "Réduire la liste"}
+                                {hasMore ? t.projects.showMore : t.projects.showLess}
                                 <svg
                                     viewBox="0 0 24 24"
                                     className={`w-5 h-5 fill-current transition-transform duration-500 ${!hasMore ? "rotate-180" : "group-hover:translate-y-1"}`}
