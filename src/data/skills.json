@@ -1,102 +1,122 @@
 [
     {
         "num": 1,
-        "img": "/images/logo/React-icon.svg",
-        "title": "Java"
+        "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
+        "title": "Java",
+        "category": "Langages"
     },
     {
         "num": 2,
-        "img": "/images/logo/React-icon.svg",
-        "title": "Java"
+        "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+        "title": "Python",
+        "category": "Langages"
     },
     {
         "num": 3,
-        "img": "/images/logo/React-icon.svg",
-        "title": "Java"
+        "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+        "title": "TypeScript",
+        "category": "Langages"
     },
     {
         "num": 4,
-        "img": "/images/logo/React-icon.svg",
-        "title": "Java"
+        "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+        "title": "JavaScript",
+        "category": "Langages"
     },
     {
         "num": 5,
-        "img": "/images/logo/React-icon.svg",
-        "title": "Java"
+        "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg",
+        "title": "C",
+        "category": "Langages"
     },
     {
         "num": 6,
-        "img": "/images/logo/React-icon.svg",
-        "title": "Java"
+        "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg",
+        "title": "SQL",
+        "category": "Langages"
     },
     {
         "num": 7,
-        "img": "/images/logo/React-icon.svg",
-        "title": "Java"
+        "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
+        "title": "HTML/CSS",
+        "category": "Langages"
     },
     {
         "num": 8,
-        "img": "/images/logo/React-icon.svg",
-        "title": "Java"
+        "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+        "title": "React",
+        "category": "Frameworks"
     },
     {
         "num": 9,
-        "img": "/images/logo/React-icon.svg",
-        "title": "Java"
+        "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+        "title": "Next.js",
+        "category": "Frameworks"
     },
     {
         "num": 10,
-        "img": "/images/logo/React-icon.svg",
-        "title": "Java"
+        "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
+        "title": "Node.js",
+        "category": "Frameworks"
     },
     {
         "num": 11,
-        "img": "/images/logo/React-icon.svg",
-        "title": "Java"
+        "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg",
+        "title": "Spring Boot",
+        "category": "Frameworks"
     },
     {
         "num": 12,
-        "img": "/images/logo/React-icon.svg",
-        "title": "Java"
+        "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+        "title": "TailwindCSS",
+        "category": "Frameworks"
     },
     {
         "num": 13,
-        "img": "/images/logo/React-icon.svg",
-        "title": "Java"
+        "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
+        "title": "Git",
+        "category": "Outils"
     },
     {
         "num": 14,
-        "img": "/images/logo/React-icon.svg",
-        "title": "Java"
+        "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
+        "title": "Docker",
+        "category": "Outils"
     },
     {
         "num": 15,
-        "img": "/images/logo/React-icon.svg",
-        "title": "Java"
+        "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg",
+        "title": "Linux",
+        "category": "Outils"
     },
     {
         "num": 16,
-        "img": "/images/logo/React-icon.svg",
-        "title": "Java"
+        "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg",
+        "title": "VS Code",
+        "category": "Outils"
     },
     {
         "num": 17,
-        "img": "/images/logo/React-icon.svg",
-        "title": "Java"
+        "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg",
+        "title": "Figma",
+        "category": "Outils"
     },
     {
         "num": 18,
-        "img": "/images/logo/React-icon.svg",
-        "title": "Java"
+        "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
+        "title": "PostgreSQL",
+        "category": "Bases de données"
     },
     {
         "num": 19,
-        "img": "/images/logo/React-icon.svg",
-        "title": "Java"
+        "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
+        "title": "MySQL",
+        "category": "Bases de données"
     },
     {
         "num": 20,
-        "img": "/images/logo/React-icon.svg",
-        "title": "Java"
+        "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
+        "title": "MongoDB",
+        "category": "Bases de données"
     }
 ]
