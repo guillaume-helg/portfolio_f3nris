@@ -1,5 +1,72 @@
 [
     {
+        "title": "Alternance en ingénierie assurance qualité ",
+        "titleEn": "Quality Assurance Engineering Apprentice ",
+        "name": "Airbus Defence & Space SAS",
+        "lieu": "Toulouse (31), France",
+        "lieuEn": "Toulouse, France",
+        "date": "2024 Septembre - Présent",
+        "dateEn": "September 2024 - Present",
+        "resume": "Alternance centrée sur l'assurance qualité logicielle, l'automatisation des tests et le développement d'outils internes",
+        "resumeEn": "Apprenticeship focused on software quality assurance, test automation, and development of internal tools",
+        "point": [
+            "Intégration de composants AngularJS dans un projet dédié à l'imagerie satellite",
+            "Réalisation de tests fonctionnels des composants AngularJS avec Karma et Gherkin",
+            "Développement de tests unitaires pour les composants AngularJS avec Jasmine",
+            "Conception et développement d'un dashboard de qualité et d'outils de reporting en Golang",
+            "Création d'un générateur de backend Go/gRPC server à l'aide de OpenAPI/Generator"
+        ],
+        "pointEn": [
+            "Integrated AngularJS components into a satellite imagery project",
+            "Conducted functional tests on AngularJS components using Karma and Gherkin",
+            "Developed comprehensive unit testing suites with Jasmine",
+            "Architected and developed a robust quality dashboard and reporting tools leveraging Golang",
+            "Engineered a Go/gRPC server backend generator using OpenAPI/Generator"
+        ],
+        "technologie": [
+            "AngularJS",
+            "Karma",
+            "Gherkin",
+            "Jasmine",
+            "Golang",
+            "OpenAPI",
+            "gRPC"
+        ],
+        "logo": "/images/logo/airbus-logo.png",
+        "lien": "https://www.airbus.com/en/products-services/defence"
+    },
+    {
+        "title": "Stage en développement de solutions digitales ",
+        "titleEn": "Digital Solutions Development Intern ",
+        "name": "Airbus Operation SAS",
+        "lieu": "Toulouse (31), France",
+        "lieuEn": "Toulouse, France",
+        "date": "2024 Avril - Août",
+        "dateEn": "2024 April - August",
+        "resume": "Développement d'outils de reporting et d'automatisation pour améliorer les processus qualité et la gestion de projet au sein d'Airbus.",
+        "resumeEn": "Development of reporting and automation tools to improve quality processes and project management within Airbus.",
+        "point": [
+            "Développement, test, et documentation d'un outil de reporting et de monitoring (Dashboard Qualité) avec Skywise",
+            "Développement d'un outil de comparaison de preuves de lecture en Python avec Pandas",
+            "Participation à la conduite de changement et à la gestion de projet",
+            "Apprentissage du monde de l'aéronautique et de la simulation avionique"
+        ],
+        "pointEn": [
+            "Developed, tested, and documented a reporting and monitoring tool (Quality Dashboard) over Skywise platforms",
+            "Built an automated comparison tool for reading proofs in Python with Pandas",
+            "Provided direct support in change management processes and project management",
+            "Learned about aeronautics, avionics equipment simulation and development"
+        ],
+        "technologie": [
+            "Skywise",
+            "Python",
+            "Pandas",
+            "Agile"
+        ],
+        "logo": "/images/logo/airbus-logo.png",
+        "lien": "https://www.airbus.com"
+    },
+    {
         "title": "Stagiaire à la DSI de ",
         "titleEn": "IT Department Intern at ",
         "name": "Viasanté",

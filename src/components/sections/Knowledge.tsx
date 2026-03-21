@@ -44,7 +44,8 @@ export default function Knowledge() {
                             "Langages": lang === 'en' ? "Languages" : "Langages",
                             "Frameworks": "Frameworks",
                             "Outils": lang === 'en' ? "Tools" : "Outils",
-                            "Bases de données": lang === 'en' ? "Databases" : "Bases de données"
+                            "Bases de données": lang === 'en' ? "Databases" : "Bases de données",
+                            "Cybersécurité": lang === 'en' ? "Cybersecurity" : "Cybersécurité"
                         };
                         const displayCategory = categoryMap[category] || category;
 

@@ -95,11 +95,11 @@ export default function Navbar() {
             {/* Theme, Search Hint & CV Button — desktop only */}
             <div className="flex items-center gap-4 max-[976px]:hidden">
                 <div
-                    className="flex items-center gap-2 px-3 py-2 rounded-full glass border border-[var(--color-card-border)] text-sm text-[var(--color-fontnew)] cursor-pointer hover:border-[rgba(var(--tertiary-rgb),0.3)] hover:text-[var(--text-primary)] transition-all duration-300"
+                    className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-full glass border border-[var(--color-card-border)] text-xs text-[var(--color-fontnew)] cursor-pointer hover:border-[rgba(var(--tertiary-rgb),0.3)] hover:text-[var(--text-primary)] transition-all duration-300"
                     onClick={() => document.dispatchEvent(new KeyboardEvent('keydown', { key: 'k', ctrlKey: true }))}
                 >
-                    <span className="opacity-70">Rechercher...</span>
-                    <kbd className="font-mono text-xs bg-[var(--bg-variant)] border border-[var(--color-card-border)] rounded px-1.5 py-0.5 opacity-80">
+                    <span className="opacity-70">Chercher...</span>
+                    <kbd className="font-mono text-[10px] bg-[var(--bg-variant)] border border-[var(--color-card-border)] rounded px-1 py-0.5 opacity-80">
                         Ctrl K
                     </kbd>
                 </div>

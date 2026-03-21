@@ -14,20 +14,20 @@
 
 .command-dialog {
     position: fixed;
-    top: 15vh;
+    top: 12vh;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
-    max-width: 500px;
+    width: 90%;
+    max-width: 360px;
     z-index: 101;
     outline: none;
 }
 
 .command-content {
     width: 100%;
-    max-width: 500px;
+    max-width: 360px;
     background: var(--glass-strong-bg);
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
     animation: slide-up 0.2s ease-out;
 }
 

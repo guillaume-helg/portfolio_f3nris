@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Guillaume Helg</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --dark-bg: #155e75;
+            --dark-bg-deep: #0e4155;
+            --primary: #06b6d4;
+            --primary-light: #67e8f9;
+            --primary-pale: #cffafe;
+            --primary-bg: #ecfeff;
+
+            --bg-page: #ffffff;
+            --text-dark: #0f172a;
+            --text-main: #334155;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --border-light: #f1f5f9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: #e2e8f0;
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            padding: 10mm 0;
+            font-size: 9pt;
+            line-height: 1.5;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            background: var(--bg-page);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+
+            .page {
+                box-shadow: none;
+                width: 210mm;
+                height: 297mm;
+            }
+        }
+
+        /* ========== HEADER ========== */
+        .header {
+            background: linear-gradient(135deg, var(--dark-bg-deep) 0%, var(--dark-bg) 60%, #0e7490 100%);
+            color: white;
+            padding: 9mm 12mm;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 6mm;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -10%;
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            right: 10%;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, rgba(103, 232, 249, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .header-text {
+            position: relative;
+            z-index: 2;
+            flex: 1;
+        }
+
+        .header-text h1 {
+            font-size: 26pt;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 2px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .header-text h2 {
+            font-size: 10.5pt;
+            font-weight: 600;
+            color: var(--primary-light);
+            margin-bottom: 4mm;
+            letter-spacing: 0.3px;
+        }
+
+        .contact-row {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 5mm;
+            row-gap: 2mm;
+            font-size: 8.5pt;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .contact-row a {
+            color: rgba(255, 255, 255, 1);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .contact-row a:hover {
+            color: var(--primary-light);
+        }
+
+        .contact-row .ci {
+            display: flex;
+            align-items: center;
+            gap: 2mm;
+        }
+
+        .contact-row i {
+            font-size: 9px;
+            color: var(--primary-light);
+            width: 12px;
+            text-align: center;
+        }
+
+        .header-qr {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2mm;
+            flex-shrink: 0;
+            background: rgba(0, 0, 0, 0.15);
+            padding: 3mm;
+            border-radius: 6px;
+        }
+
+        .header-qr a {
+            color: var(--primary-pale);
+            text-decoration: none;
+            font-size: 7.5pt;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .header-qr .qr-code {
+            width: 18mm;
+            height: 18mm;
+            border-radius: 4px;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            background: white;
+            padding: 1px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* ========== BODY ========== */
+        .body-content {
+            flex: 1;
+            padding: 6mm 12mm 8mm;
+            display: flex;
+            flex-direction: column;
+            gap: 5mm;
+        }
+
+        /* ========== SECTION BARS ========== */
+        .section-bar {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3.5mm;
+        }
+
+        .section-bar::before {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--border), var(--dark-bg));
+            margin-right: 4px;
+        }
+
+        .section-bar::after {
+            content: '';
+            flex: 10;
+            height: 1px;
+            background: linear-gradient(to left, transparent, var(--border), var(--dark-bg));
+            margin-left: 4px;
+        }
+
+        .section-title-badge {
+            background: var(--dark-bg);
+            color: white;
+            padding: 3px 14px;
+            border-radius: 16px;
+            font-size: 8.5pt;
+            font-weight: 700;
+            white-space: nowrap;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            box-shadow: 0 2px 4px rgba(14, 65, 85, 0.2);
+        }
+
+        /* ========== SUMMARY ========== */
+        .summary-text {
+            font-size: 9pt;
+            color: var(--text-main);
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        /* ========== ITEM (Experience / Projects) ========== */
+        .item {
+            margin-bottom: 4mm;
+            position: relative;
+        }
+
+        .item:last-child {
+            margin-bottom: 0;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 4mm;
+            margin-bottom: 1mm;
+        }
+
+        .item-title-col {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .item-title {
+            font-weight: 700;
+            font-size: 10pt;
+            color: var(--text-dark);
+            letter-spacing: 0.2px;
+        }
+
+        .item-org {
+            font-size: 7.5pt;
+            color: var(--primary);
+            font-weight: 700;
+            background: var(--primary-bg);
+            border: 1px solid var(--primary-pale);
+            padding: 2px 8px;
+            border-radius: 10px;
+            white-space: nowrap;
+        }
+
+        .item-meta {
+            font-family: 'Fira Code', monospace;
+            font-size: 7.5pt;
+            color: var(--text-muted);
+            margin-top: 0.5mm;
+            display: flex;
+            align-items: center;
+            gap: 1.5mm;
+        }
+
+        /* Bullets */
+        .item ul {
+            list-style: none;
+            padding-left: 5mm;
+            margin-top: 2mm;
+        }
+
+        .item li {
+            position: relative;
+            padding-left: 3.5mm;
+            margin-bottom: 1.2mm;
+            font-size: 8.5pt;
+            color: var(--text-main);
+            line-height: 1.55;
+        }
+
+        .item li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-size: 10pt;
+            line-height: 1.4;
+            font-weight: 800;
+        }
+
+        .hl {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        /* ========== EDUCATION GRID ========== */
+        .edu-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3mm 6mm;
+        }
+
+        .edu-entry {
+            position: relative;
+            padding-left: 4mm;
+            border-left: 2px solid var(--border);
+            transition: border-color 0.2s;
+        }
+
+        .edu-entry:hover {
+            border-left-color: var(--primary-light);
+        }
+
+        .edu-entry::before {
+            content: '';
+            position: absolute;
+            left: -4.5px;
+            top: 5px;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: white;
+            border: 2px solid var(--primary);
+        }
+
+        .edu-degree {
+            font-weight: 700;
+            font-size: 9pt;
+            color: var(--text-dark);
+        }
+
+        .edu-school {
+            font-size: 8pt;
+            color: var(--text-main);
+            margin-top: 0.5mm;
+        }
+
+        .edu-date {
+            font-family: 'Fira Code', monospace;
+            font-size: 7.5pt;
+            color: var(--text-muted);
+            font-weight: 500;
+            margin-top: 0.5mm;
+        }
+
+        /* ========== SKILLS ========== */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5mm 6mm;
+            background: #f8fafc;
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            padding: 4mm 5mm;
+        }
+
+        .skill-row {
+            display: flex;
+            align-items: baseline;
+            gap: 2.5mm;
+            font-size: 8.5pt;
+            line-height: 1.5;
+        }
+
+        .skill-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-top: 3.5px;
+        }
+
+        .skill-row strong {
+            font-weight: 700;
+            color: var(--text-dark);
+            white-space: nowrap;
+        }
+
+        .skill-row span {
+            color: var(--text-main);
+        }
+
+        /* ========== PRINT ADJUSTMENTS ========== */
+        @media print {
+            .header {
+                background: var(--dark-bg) !important;
+                padding: 8mm 12mm;
+            }
+
+            .skills-grid {
+                background: white !important;
+                border-color: var(--border) !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <!-- HEADER -->
+        <header class="header">
+            <div class="header-text">
+                <h1>Guillaume HELG</h1>
+                <h2>Software Quality Assurance &amp; Engineering Student</h2>
+                <div class="contact-row">
+                    <div class="ci"><i class="fa-solid fa-location-dot"></i> Toulouse, France</div>
+                    <div class="ci"><i class="fa-solid fa-phone"></i> +33 7 69 83 97 29</div>
+                    <div class="ci"><i class="fa-solid fa-envelope"></i> <a
+                            href="mailto:Guillaume.helg@toulouse.miage.fr">Guillaume.helg@toulouse.miage.fr</a></div>
+                    <div class="ci"><i class="fa-brands fa-github"></i> <a
+                            href="https://github.com/guillaume-helg">github.com/guillaume-helg</a></div>
+                    <div class="ci"><i class="fa-brands fa-linkedin"></i> <a
+                            href="https://linkedin.com/in/guillaume-helg">linkedin.com/in/guillaume-helg</a></div>
+                </div>
+            </div>
+            <div class="header-qr">
+                <a href="https://f3nris.dev" target="_blank">Portfolio</a>
+                <img class="qr-code"
+                    src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://f3nris.dev&color=155e75"
+                    alt="QR Portfolio">
+            </div>
+        </header>
+
+        <!-- BODY -->
+        <div class="body-content">
+            <!-- SUMMARY -->
+            <section>
+                <div class="section-bar"><span class="section-title-badge">Summary</span></div>
+                <p class="summary-text">
+                    Master's student in IT and Business Management (MIAGE) and Quality Assurance Engineering Apprentice
+                    at <span class="hl">Airbus Defence &amp; Space</span>. Specialized in software reliability, test
+                    automation, and full-stack development. Detail-oriented and eager to take on complex engineering
+                    challenges. Seeking a professional opportunity starting in <span class="hl">October 2026</span>.
+                </p>
+            </section>
+
+            <!-- EXPERIENCE -->
+            <section>
+                <div class="section-bar"><span class="section-title-badge">Professional Experience</span></div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <div class="item-title-col">
+                            <div class="item-title">Quality Assurance Engineering Apprentice</div>
+                            <div class="item-meta"><i class="fa-regular fa-calendar"></i> Sep 2024 - Present
+                                &nbsp;&middot;&nbsp; <i class="fa-solid fa-location-arrow"></i> Toulouse, France</div>
+                        </div>
+                        <span class="item-org">Airbus Defence &amp; Space SAS</span>
+                    </div>
+                    <ul>
+                        <li>Integrated <span class="hl">AngularJS</span> components into the front-end architecture of a
+                            satellite imagery project.</li>
+                        <li>Conducted functional tests on AngularJS components using <span class="hl">Karma</span> and
+                            <span class="hl">Gherkin</span> to ensure behavioral reliability.
+                        </li>
+                        <li>Developed comprehensive unit testing suites with <span class="hl">Jasmine</span>,
+                            significantly reducing frontend regressions.</li>
+                        <li>Architected and developed a robust quality dashboard and reporting tools leveraging <span
+                                class="hl">Golang</span>.</li>
+                        <li>Engineered a <span class="hl">Go/gRPC</span> server backend generator using <span
+                                class="hl">OpenAPI/Generator</span> for automated API setups.</li>
+                    </ul>
+                </div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <div class="item-title-col">
+                            <div class="item-title">Digital Solutions Development Intern</div>
+                            <div class="item-meta"><i class="fa-regular fa-calendar"></i> Apr 2024 - Aug 2024
+                                &nbsp;&middot;&nbsp; <i class="fa-solid fa-location-arrow"></i> Toulouse, France</div>
+                        </div>
+                        <span class="item-org">Airbus Operation SAS</span>
+                    </div>
+                    <ul>
+                        <li>Developed, tested, and documented a reporting and monitoring tool (Quality Dashboard) over
+                            <span class="hl">Skywise</span> platforms.
+                        </li>
+                        <li>Built an automated comparison tool for reading proofs in <span class="hl">Python</span> with
+                            <span class="hl">Pandas</span>, saving hours of manual review.
+                        </li>
+                        <li>Provided direct support in change management processes and avionics equipment simulation
+                            projects.</li>
+                    </ul>
+                </div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <div class="item-title-col">
+                            <div class="item-title">IT Department Intern</div>
+                            <div class="item-meta"><i class="fa-regular fa-calendar"></i> Apr 2022 - Jun 2022
+                                &nbsp;&middot;&nbsp; <i class="fa-solid fa-location-arrow"></i> Rodez, France</div>
+                        </div>
+                        <span class="item-org">Viasanté</span>
+                    </div>
+                    <ul>
+                        <li>Conducted targeted technical research on optimal software application versioning strategies.
+                        </li>
+                        <li>Mapped, urbanized, and logically partitioned the organization's overarching Information
+                            System architecture.</li>
+                        <li>Utilized <span class="hl">MEGA Hopex</span> to inventory, diagram, and catalog internal
+                            applications and technologies.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- PROJECTS -->
+            <section>
+                <div class="section-bar"><span class="section-title-badge">Projects</span></div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <div class="item-title-col">
+                            <div class="item-title">Blog Management Web Application</div>
+                            <div class="item-meta">Feb 2024 - Mar 2024</div>
+                        </div>
+                        <span class="item-org">Paul Sabatier University</span>
+                    </div>
+                    <ul>
+                        <li>Led a 3-person team to construct a full-stack blog platform using <span
+                                class="hl">Agile/Kanban</span>, <span class="hl">AngularJS</span>, <span
+                                class="hl">NodeJS</span>, and <span class="hl">Tailwind CSS</span>.</li>
+                        <li>Designed internal capabilities for persistent data storage, robust user authentication, and
+                            granular access protocols.</li>
+                    </ul>
+                </div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <div class="item-title-col">
+                            <div class="item-title">Linux/Debian Software Mass Management</div>
+                            <div class="item-meta">Oct 2021 - Mar 2022</div>
+                        </div>
+                        <span class="item-org">IUT de Rodez</span>
+                    </div>
+                    <ul>
+                        <li>Created advanced <span class="hl">Bash</span> scripting solutions to dynamically coordinate
+                            software bases across Debian GNU/Linux systems.</li>
+                        <li>Acted as Product Owner within a 4-person <span class="hl">SCRUM</span> team over a full
+                            academic year.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- EDUCATION -->
+            <section>
+                <div class="section-bar"><span class="section-title-badge">Education</span></div>
+                <div class="edu-grid">
+                    <div class="edu-entry">
+                        <div class="edu-degree">Master's in MIAGE</div>
+                        <div class="edu-school">Paul Sabatier University, Toulouse</div>
+                        <div class="edu-date">2024 - Present</div>
+                    </div>
+                    <div class="edu-entry">
+                        <div class="edu-degree">Bachelor's in MIAGE</div>
+                        <div class="edu-school">Paul Sabatier University, Toulouse</div>
+                        <div class="edu-date">2023 - 2024</div>
+                    </div>
+                    <div class="edu-entry">
+                        <div class="edu-degree">Bachelor's in MIASHS</div>
+                        <div class="edu-school">Paul Sabatier University, Toulouse</div>
+                        <div class="edu-date">2022 - 2023</div>
+                    </div>
+                    <div class="edu-entry">
+                        <div class="edu-degree">Two-Year Degree in CS (DUT)</div>
+                        <div class="edu-school">IUT de Rodez, Toulouse 1 Capitole</div>
+                        <div class="edu-date">2020 - 2022</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CERTIFICATIONS -->
+            <section>
+                <div class="section-bar"><span class="section-title-badge">Certifications</span></div>
+                <div class="edu-grid">
+                    <div class="edu-entry">
+                        <div class="edu-degree">BIA (Brevet d'Initiation Aéronautique)</div>
+                        <div class="edu-school">French Ministry of National Education</div>
+                        <div class="edu-date">Obtained</div>
+                    </div>
+                    <div class="edu-entry">
+                        <div class="edu-degree">ANSSI Cybersecurity MOOC</div>
+                        <div class="edu-school">French National Cybersecurity Agency</div>
+                        <div class="edu-date">Obtained</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SKILLS -->
+            <section>
+                <div class="section-bar"><span class="section-title-badge">Skills</span></div>
+                <div class="skills-grid">
+                    <div class="skill-row">
+                        <div class="skill-dot" style="background: #06b6d4;"></div>
+                        <div><strong>Programming:</strong> <span><span class="hl">Java</span>, JavaScript, Python, C,
+                                SQL, <span class="hl">Bash</span>, PHP</span></div>
+                    </div>
+                    <div class="skill-row">
+                        <div class="skill-dot" style="background: #0891b2;"></div>
+                        <div><strong>Frameworks:</strong> <span>ReactJS, AngularJS, Django, NodeJS, Spring Boot</span>
+                        </div>
+                    </div>
+                    <div class="skill-row">
+                        <div class="skill-dot" style="background: #14b8a6;"></div>
+                        <div><strong>Tools &amp; DevOps:</strong> <span>Git, GitHub/GitLab, Docker, MongoDB,
+                                OpenAPI</span></div>
+                    </div>
+                    <div class="skill-row">
+                        <div class="skill-dot" style="background: #0ea5e9;"></div>
+                        <div><strong>Cybersecurity:</strong> <span>Burp Suite, Kali Linux, ANSSI MOOC</span></div>
+                    </div>
+                    <div class="skill-row">
+                        <div class="skill-dot" style="background: #0284c7;"></div>
+                        <div><strong>Languages:</strong> <span>English (B2) 🇬🇧 &nbsp; French (Native) 🇫🇷</span>
+                        </div>
+                    </div>
+                    <div class="skill-row">
+                        <div class="skill-dot" style="background: #6366f1;"></div>
+                        <div><strong>Software:</strong> <span>IntelliJ, <span class="hl">Figma</span>, VirtualBox,
+                                Android Studio</span></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>

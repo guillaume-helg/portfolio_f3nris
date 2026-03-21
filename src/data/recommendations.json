@@ -1,25 +1,14 @@
 [
     {
         "id": 1,
-        "company": "Tech Corp",
-        "date": "Mai 2024",
-        "dateEn": "May 2024",
-        "text": "Guillaume a été un élément clé de notre projet. Ses compétences techniques et sa capacité à résoudre des problèmes complexes ont grandement contribué à notre succès.",
-        "textEn": "Guillaume was a key asset to our project. His technical skills and ability to solve complex problems greatly contributed to our success.",
-        "author": "Jean Dupont",
-        "role": "Chef de projet",
-        "roleEn": "Project Manager",
-        "url": "https://linkedin.com"
-    },
-    {
-        "id": 2,
-        "company": "Web Solutions",
-        "date": "Janvier 2025",
-        "dateEn": "January 2025",
-        "text": "Excellent développeur. Très réactif et soucieux du détail.",
-        "textEn": "Excellent developer. Very responsive and detail-oriented.",
-        "author": "Marie Curie",
-        "role": "CTO",
-        "roleEn": "CTO"
+        "company": "Airbus Operation SAS",
+        "companyEn": "Airbus Operation SAS",
+        "date": "05/08/2024",
+        "dateEn": "August 5, 2024",
+        "text": "Dans le cadre de sa mission, Guillaume a eu l'occasion de se familiariser avec la méthodologie de gestion de projet (développement de produits, gestion de projet agile, ..) et le cycle de développement de produits. Il a été confronté à différents départements et parties prenantes avec des points de vue et des priorités différents. Guillaume a rapidement pris en compte son environnement et ses équipes hautement qualifiées, a compris les besoins de l'entreprise pour apporter de nouvelles idées et des outils \"quick wins\" pour simplifier et gagner en efficacité. Il a fait preuve d'un haut niveau de réactivité, de curiosité, d'implication et d'un grand intérêt tout au long de sa période de stage. Je recommande vivement Guillaume pour ses futures recherches de stage.",
+        "textEn": "In the frame of his mission, Guillaume had opportunities to get familiar with project management methodology (product development, Agile Project management,..) and product development cycle. He got confronted to different departments and stakeholders with different points of views and priorities. Guillaume quickly considered his environment and high skills teams, understood business needs to bring some news ideas and quick wins tools to simplify and bring efficiency. He showed high level of reactivity, curiosity, implication and high concern all along his training period. I fully recommend Guillaume for his next training requests.",
+        "author": "Sabrina Hue",
+        "role": "Manager Qualité",
+        "roleEn": "Quality Manager"
     }
 ]
